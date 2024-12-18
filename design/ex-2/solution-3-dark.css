@@ -1,0 +1,89 @@
+/* Dark Theme CSS with Advanced Gradients and Color Palette */
+
+:root {
+    /* Expanded Color Palette with Tints and Shades */
+    --primary-dark: #4CAF50;
+    --primary-dark-50: #81c784;  /* Lighter tint */
+    --primary-dark-75: #66bb6a;  /* Medium tint */
+    --primary-dark-125: #2E7D32; /* Darker shade */
+
+    --secondary-dark: #2196F3;
+    --secondary-dark-50: #64b5f6;
+    --secondary-dark-75: #42a5f5;
+    --secondary-dark-125: #1565C0;
+
+    --background-dark: #121212;
+    --text-dark: #7a0e0e;
+    --accent-dark: #FF5722;
+    
+    /* Advanced Gradient Definitions */
+    --hero-gradient-start-dark: linear-gradient(45deg, #6a11cb, #2575fc);
+    --hero-gradient-end-dark: linear-gradient(135deg, #2575fc, #6a11cb);
+    --button-gradient-dark: linear-gradient(to right, #4CAF50, #2196F3);
+    --section-gradient-dark: linear-gradient(180deg, 
+        var(--primary-dark-50), 
+        var(--primary-dark) 50%, 
+        var(--primary-dark-125)
+    );
+
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    --transition-speed: 0.3s;
+}
+
+body.dark-theme {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Intro Section with Advanced Gradients */
+body.dark-theme .intro {
+    background: var(--hero-gradient-start-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .intro h1 {
+    background: var(--hero-gradient-end-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body.dark-theme .intro h2 {
+    background: var(--section-gradient-dark);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Buttons with Radial Gradients */
+body.dark-theme .theme-toggle {
+    background: var(--button-gradient-dark);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+}
+
+body.dark-theme .theme-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(255,255,255,0.2);
+}
+
+/* Responsive Color Adjustments */
+@media screen and (max-width: 768px) {
+    body.dark-theme {
+        --primary-dark: #2E7D32;  /* Darker primary on smaller screens */
+        --background-dark: #1a1a1a;  /* Slightly different background */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body.dark-theme {
+        --primary-dark: #1565C0;  /* Even darker on very small screens */
+    }
+}

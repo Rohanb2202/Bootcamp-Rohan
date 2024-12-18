@@ -1,0 +1,2 @@
+2024-12-17 21:11:33.187 [ERROR]: Division failed {"error":"Division by zero is not allowed","numerator":10,"denominator":0}
+2024-12-18 14:52:45.633 [ERROR]: Division failed {"error":"Division by zero is not allowed","numerator":10,"denominator":0}

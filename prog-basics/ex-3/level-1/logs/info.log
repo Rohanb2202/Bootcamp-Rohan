@@ -1,0 +1,5 @@
+2024-12-18 14:50:56 [[32minfo[39m]: [32mProgram started[39m
+2024-12-18 14:50:56 [[32minfo[39m]: [32mPerforming calculations[39m
+2024-12-18 14:50:56 [[32minfo[39m]: [32mDivided 10 by 2, result: 5[39m
+2024-12-18 14:50:56 [[31merror[39m]: [31mDivision error: Division by zero is not allowed[39m
+2024-12-18 14:50:56 [[33mwarn[39m]: [33mCalculations complete[39m

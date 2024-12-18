@@ -1,0 +1,93 @@
+/* Light Theme CSS with Advanced Gradients and Color Palette */
+
+:root {
+    /* Expanded Color Palette with Tints and Shades */
+    --primary-light: #1a73e8;
+    --primary-light-50: #b3d5ff;  /* Lighter tint */
+    --primary-light-75: #4a8ded;  /* Medium tint */
+    --primary-light-125: #145aa3; /* Darker shade */
+
+    --secondary-light: #34495e;
+    --secondary-light-50: #5d7282;
+    --secondary-light-75: #2c3e50;
+    --secondary-light-125: #1c2833;
+
+    --background-light: #f4f7f6;
+    --text-light: #c4d0dd;
+    --accent-light: #ff5722;
+    
+    /* Advanced Gradient Definitions */
+    --hero-gradient-start: linear-gradient(45deg, #1a73e8, #6a11cb);
+    --hero-gradient-end: linear-gradient(135deg, #6a11cb, #2575fc);
+    --button-gradient: linear-gradient(to right, #1a73e8, #6a11cb);
+    --section-gradient: linear-gradient(180deg, 
+        var(--primary-light-50), 
+        var(--primary-light) 50%, 
+        var(--primary-light-125)
+    );
+
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+/* Intro Section with Advanced Gradients */
+.intro {
+    background: var(--hero-gradient-start);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.intro h1 {
+    background: var(--hero-gradient-end);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.intro h2 {
+    background: var(--section-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Buttons with Radial Gradients */
+.theme-toggle {
+    background: var(--button-gradient);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive Color Adjustments */
+@media screen and (max-width: 768px) {
+    :root {
+        --primary-light: #145aa3;  /* Darker primary on smaller screens */
+        --background-light: #f0f4f8;  /* Slightly different background */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --primary-light: #1c2833;  /* Even darker on very small screens */
+    }
+}

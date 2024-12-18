@@ -1,0 +1,16 @@
+# config/development.yaml
+database:
+  host: localhost
+  port: 5432
+  username: devuser
+  password: devpassword
+
+application:
+  name: Ex-6 App
+  version: 1.0.0
+  environment: development
+  debug: true
+
+logging:
+  level: debug
+  file: dev-app.log

@@ -1,0 +1,12 @@
+2024-12-18T07:22:44.062Z [INFO]: Using database file: ./database.sqlite
+2024-12-18T07:22:44.063Z [INFO]: API key loaded securely.
+2024-12-18T07:22:44.064Z [INFO]: Calling API at endpoint: https://example.com/data
+2024-12-18T07:22:44.066Z [INFO]: Connected to SQLite database.
+2024-12-18T07:22:44.081Z [INFO]: Users table is ready.
+2024-12-18T07:22:44.081Z [INFO]: Database connection closed.
+2024-12-18T09:32:29.506Z [INFO]: Using database file: ./database.sqlite
+2024-12-18T09:32:29.507Z [INFO]: API key loaded securely.
+2024-12-18T09:32:29.508Z [INFO]: Calling API at endpoint: https://example.com/data
+2024-12-18T09:32:29.512Z [INFO]: Connected to SQLite database.
+2024-12-18T09:32:29.517Z [INFO]: Users table is ready.
+2024-12-18T09:32:29.518Z [INFO]: Database connection closed.
