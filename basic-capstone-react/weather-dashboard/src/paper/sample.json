@@ -1,0 +1,85 @@
+[
+    {
+        "Title": "Quantum Cryptography in Quantum Computing Research",
+        "Authors": "Anderson, J.",
+        "Year": 2019,
+        "Journal": "Nature",
+        "Citations": 1819,
+        "DOI": "10.1529/nature.2019.346",
+        "Keywords": "Qubits, Quantum Cryptography, Quantum Algorithms",
+        "Institution": "Massachusetts General Hospital",
+        "Field": "Quantum Computing",
+        "Impact_Factor": 4.266
+    },
+    {
+        "Title": "Black Holes in Astrophysics Research",
+        "Authors": "Johnson, A.",
+        "Year": 2015,
+        "Journal": "Quantum Computing Quarterly",
+        "Citations": 1958,
+        "DOI": "10.2584/quantum.2015.293",
+        "Keywords": "Gravitational Waves, Pulsar Timing Arrays",
+        "Institution": "Harvard University",
+        "Field": "Astrophysics",
+        "Impact_Factor": 4.501
+    },
+    {
+        "Title": "Drug Delivery in Pharmacology Research",
+        "Authors": "Patel, S.",
+        "Year": 2023,
+        "Journal": "Environmental Science Review",
+        "Citations": 3601,
+        "DOI": "10.8942/environmental.2023.390",
+        "Keywords": "Pharmaceuticals, Drug Delivery, Nanoparticles",
+        "Institution": "University of Cambridge",
+        "Field": "Pharmacology",
+        "Impact_Factor": 3.538
+    },
+    {
+        "Title": "Cancer Detection in Healthcare Research",
+        "Authors": "Martinez, M.",
+        "Year": 2011,
+        "Journal": "arXiv preprint",
+        "Citations": 2230,
+        "DOI": "10.7123/arxiv.2011.726",
+        "Keywords": "Medical Imaging, Proton Therapy",
+        "Institution": "Harvard University",
+        "Field": "Healthcare",
+        "Impact_Factor": 7.641
+    },
+    {
+        "Title": "Gravitational Waves in Astrophysics Research",
+        "Authors": "Johnson, K.",
+        "Year": 2010,
+        "Journal": "Astrophysical Journal Letters",
+        "Citations": 1851,
+        "DOI": "10.8670/astrophysical.2010.553",
+        "Keywords": "Gravitational Waves, Black Holes, Pulsar Timing Arrays",
+        "Institution": "Stanford University",
+        "Field": "Astrophysics",
+        "Impact_Factor": 6.495
+    },
+    {
+        "Title": "Cancer Detection in Healthcare Research",
+        "Authors": "Lee, A.",
+        "Year": 2006,
+        "Journal": "Science",
+        "Citations": 3420,
+        "DOI": "10.9834/science.2006.72",
+        "Keywords": "Medical Imaging, Proton Therapy",
+        "Institution": "Massachusetts General Hospital",
+        "Field": "Healthcare",
+        "Impact_Factor": 6.951
+    },
+    {
+        "Title": "Radiotherapy in Medical Physics Research",
+        "Authors": "Smith, J.",
+        "Year": 2015,
+        "Journal": "Environmental Science Review",
+        "Citations": 235,
+        "DOI": "10.9113/environmental.2015.386",
+        "Keywords": "Proton Therapy, Medical Imaging, Radiotherapy",
+        "Institution": "Meta AI",
+        "Field": "Medical Physics",
+        "Impact_Factor": 4.164
+    }]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+    <body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header-title">Research Papers Explorer</h1>
+        </div>
+
+        <div class="filters-card">
+            <div class="filters">
+                <div class="filter_fields_wrapper">
+                    <div class="search-container">
+                        <input type="text" id="search-bar" placeholder="Search papers..." onkeyup="searchPapers()">
+                    </div>
+                    <select id="institution-filter" onchange="filterPapers()">
+                        <option value="">Select Institution</option>
+                    </select>
+                    <select id="journal-filter" onchange="filterPapers()">
+                        <option value="">Select Journal</option>
+                    </select>
+                    <select id="year-filter" onchange="filterPapers()">
+                        <option value="">Select Year</option>
+                    </select>
+                </div>
+                <div class="filter_buttons_wrapper">
+                    <button class="reset-button" onclick="resetFilters()">Reset Filters</button>
+                    <button onclick="exportData()">Export Data</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="papers-container">
+            <div id="papers-list" class="papers-list">
+                <!-- Papers will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <div class="pagination-controls" id="pagination-controls">
+            <!-- Pagination controls will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div class="loading-spinner" id="loading-spinner"></div>
+
+    <script src="script.js"></script>
+    <button class="back-button" onclick="window.location.href='https://stellular-marshmallow-b77b25.netlify.app/'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+    </body>
+    </html>

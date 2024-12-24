@@ -1,0 +1,16 @@
+# config/production.yaml
+database:
+  host: prod-db-cluster.example.com
+  port: 5432
+  username: produser
+  password: secureproductionpassword
+
+application:
+  name: Ex-6 App
+  version: 1.0.0
+  environment: production
+  debug: false
+
+logging:
+  level: error
+  file: prod-app.log

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Amazon Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Previous HTML structure remains the same -->
+    <header>
+        <div class="logo">Amazon</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products..." id="searchInput">
+            <button onclick="searchProducts()">Search</button>
+        </div>
+        <div class="nav-links">
+            <a href="#">Sign In</a>
+            <a href="#">Orders</a>
+            <a href="#">Cart</a>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <nav>
+            <a href="#">All</a>
+            <a href="#">Fresh</a>
+            <a href="#">MX Player</a>
+            <a href="#">Sell</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Mobiles</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Prime</a>
+            <a href="#">Electronics</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Amazon Pay</a>
+            <a href="#">New Releases</a>
+            <a href="#">Fashion</a>
+            <a href="#">Car & Motorbike</a>
+            <a href="#">Computers</a>
+        </nav>
+    </div>
+
+    <main class="main">
+        <div class="carousel">Featured Products</div>
+    
+        <div class="filters-section">
+            <h3>Filters</h3>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter" onchange="applyFilters()">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Price Range</label>
+                    <div class="price-range">
+                        <input type="number" id="min-price" placeholder="Min" onchange="applyFilters()">
+                        <span>to</span>
+                        <input type="number" id="max-price" placeholder="Max" onchange="applyFilters()">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label for="rating-filter">Minimum Rating</label>
+                    <select id="rating-filter" onchange="applyFilters()">
+                        <option value="">Any Rating</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="2">2+ Stars</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+    </main>
+    
+
+    <!-- <main class="main">
+        <div class="carousel">Carousel Banner</div>
+
+        <div class="product-grid" id="productGrid">
+            
+        </div>
+    </main> -->
+
+    <footer>
+        <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+    </footer>
+
+ <script src="script.js"></script>
+
+ <button class="back-button" onclick="window.location.href='https://stellular-marshmallow-b77b25.netlify.app/'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Back
+  </button>
+
+</body>
+</html>

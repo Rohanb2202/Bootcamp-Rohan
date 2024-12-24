@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Using Logging (Winston)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 3: Using Logging (Winston)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Install <code>winston</code> and create a logger with separate log levels (<code>info</code>, <code>warn</code>, <code>error</code>).</li>
+                        <li>Log events such as <code>"Program started"</code> and <code>"Operation successful"</code>.</li>
+                        <li>Add a few more functions like <code>divide</code>. Division by zero should be logged as a <code>fatal</code> error.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Logs are output to the console with appropriate log levels.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Add file transport to log messages to a file.</li>
+                        <li>Customize the log format to include timestamps.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Logs are written to a file with timestamps.</li>
+                        <li>The format is clear and readable.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>The following steps were followed to implement structured logging:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Installed the <code>winston</code> library using <code>npm install winston</code>.</li>
+                        <li>Created a basic logger with three levels: <code>info</code>, <code>warn</code>, and <code>error</code>.</li>
+                        <li>Added a <code>divide</code> function, ensuring division by zero triggers a <code>fatal</code> error log.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Enhanced the logger by adding file transport to save logs to a file for persistent storage.</li>
+                        <li>Customized the log format to include timestamps using <code>winston.format.combine</code> with <code>winston.format.timestamp</code> and <code>winston.format.printf</code>.</li>
+                        <li>Validated that logs were being written to the file in a clear and readable format.</li>
+                        <li>Ran various tests to ensure that both console and file logging were functioning correctly with timestamps.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>By following these steps, the logging implementation became robust, scalable, and suited for real-world applications.</p>
+        </section>
+    </main>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

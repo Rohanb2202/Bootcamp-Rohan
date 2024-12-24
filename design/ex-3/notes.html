@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise 3: Basics of Icons</h2>
+            <h3>Level 1</h3>
+            <ul>
+                <li>Add three icons to a page using an icon font library (e.g., Font Awesome).</li>
+                <li>Style the icons using CSS (e.g., size, color).</li>
+            </ul>
+
+            <h3>Level 2</h3>
+            <ul>
+                <li>Replace one icon with an SVG file.</li>
+                <li>Create a grid of six icons (three from a font library and three as inline SVG).</li>
+                <li>Add hover effects to icons (e.g., color change, scaling).</li>
+            </ul>
+
+            <h3>Level 3</h3>
+            <ul>
+                <li>Design a navigation bar with icons as the main interactive elements.
+                    <ul>
+                        <li>Include home, about, and contact icons.</li>
+                        <li>Align the icons with labels using CSS.</li>
+                    </ul>
+                </li>
+                <li>Create buttons for download and upload, embedding SVG icons.</li>
+                <li>Apply consistent spacing and alignment to all icons on the page.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            <h3>Level 1</h3>
+            <p>I began by integrating an icon font library, such as Font Awesome, to add three distinct icons to the page. Using CSS, I styled the icons to ensure appropriate sizing and color coordination, making them visually appealing and consistent with the page theme.</p>
+
+            <h3>Level 2</h3>
+            <p>To enhance the design, I replaced one of the font icons with an inline SVG. I created a grid showcasing six icons, evenly distributed with three from the font library and three as SVGs. For interactivity, I added hover effects such as color changes and scaling to make the icons more engaging for users.</p>
+
+            <h3>Level 3</h3>
+            <p>I developed a navigation bar where icons served as the primary interactive elements, aligning them with labels for home, about, and contact sections. I also created buttons for upload and download functionalities, embedding SVG icons within them. Consistent spacing and alignment were applied across all icons, ensuring a professional and polished layout.</p>
+        </section>
+
+       
+    </main>
+
+    <footer>
+        <p>notes</p>
+    </footer>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

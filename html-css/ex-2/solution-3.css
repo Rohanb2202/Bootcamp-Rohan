@@ -1,0 +1,162 @@
+@import url('variable-3.css');
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Content container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Section styles */
+.section {
+    flex: 1;
+    background-color: var(--header-bg);
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--text-color);
+}
+
+th {
+    background-color: var(--header-bg);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--table-row-bg);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-alt-row-bg);
+}
+
+/* Links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Theme switcher */
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-switcher input {
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: var(--text-color);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.theme-switcher input::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: left 0.3s, background-color 0.3s;
+}
+
+.theme-switcher input:checked {
+    background-color: var(--secondary-color);
+}
+
+.theme-switcher input:checked::before {
+    left: 27.5px;
+}
+
+.footer{
+    text-align: center;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 16px;
+    }
+}

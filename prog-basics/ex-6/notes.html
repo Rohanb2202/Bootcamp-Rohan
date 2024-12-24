@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6: YAML Configuration (config)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 6: YAML Configuration (config)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Install the <code>config</code> library and create a <code>default.yaml</code> configuration file.</li>
+                        <li>Load and use configuration values in the program.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The program reads values from the YAML file.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Add multiple environments (e.g., <code>development</code>, <code>production</code>) to the configuration.</li>
+                        <li>Load the appropriate configuration based on the environment.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The program switches configurations based on the environment.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Use the configuration to dynamically adjust program behavior (e.g., logging levels).</li>
+                        <li>Use the configuration file to specify additional commands and also functions and files where the commands are implemented.</li>
+                        <li>Dynamically load the functions in your code, extending the functionality. For example, load the functions called <code>sin</code> and <code>cos</code> from a new file specified in the configuration file.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Configuration drives program behavior dynamically.</li>
+                        <li>New functionality can be added to the code without modifying the old code.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>The following steps were taken to implement YAML-based configuration management:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Installed the <code>config</code> library using <code>npm install config js-yaml</code>.</li>
+                        <li>Created a <code>default.yaml</code> file with basic configuration values such as server port, database details, etc.</li>
+                        <li>Loaded the configuration into the program using <code>require('config')</code> and used the values to set up the program's behavior.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Created additional environment-specific configuration files such as <code>development.yaml</code> and <code>production.yaml</code>.</li>
+                        <li>Set the <code>NODE_ENV</code> environment variable to switch between configurations.</li>
+                        <li>Tested the program to ensure it loaded the correct configuration based on the environment.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 3:</strong>
+                    <ul>
+                        <li>Enhanced the configuration to include logging levels and dynamically adjustable program behavior.</li>
+                        <li>Specified additional commands, functions like <code>math-function.js</code> and <code>custom-funtion.js</code>, and their respective file paths in the configuration file.</li>
+                        <li>Used <code>require()</code> dynamically to load the specified functions and integrate them into the program.</li>
+                        <li>Tested the program to ensure that new functionality could be added via the configuration file without modifying the existing codebase.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>This approach ensures modularity, scalability, and maintainability of the codebase by leveraging YAML-based configuration files.</p>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

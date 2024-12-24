@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-1 : Level-3</title>
+    
+    <!-- AG Grid Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.1.1/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@31.1.1/styles/ag-theme-alpine.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Student Management Dashboard</h1>
+        
+        <div class="action-buttons">
+            <button id="addStudentBtn" class="btn">Add Student</button>
+            <button id="exportBtn" class="btn">Export to CSV</button>
+        </div>
+        
+        <div id="studentGrid" class="ag-theme-alpine"></div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community@31.1.1/dist/ag-grid-community.min.js"></script>
+    
+    <!-- Modules -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

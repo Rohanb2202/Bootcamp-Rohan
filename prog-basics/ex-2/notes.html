@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Command-Line Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 2: Command-Line Program</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Create a script that calculates the sum of numbers passed as command-line arguments.</li>
+                        <li>Use <code>process.argv</code> to parse and handle the arguments.</li>
+                        <li>Include error handling for invalid inputs (e.g., non-numeric values).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Running the script with valid inputs returns the correct sum.</li>
+                        <li>Invalid inputs result in meaningful error messages.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Enhance the script to accept a <code>--multiply</code> flag to multiply the numbers instead of adding them.</li>
+                        <li>Update the help text to include usage instructions.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The <code>--multiply</code> flag works as expected.</li>
+                        <li>Usage instructions are clear and correct.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Modularize the program by creating a separate file (<code>mathutils.js</code>) for the <code>add</code> and <code>multiply</code> functions.</li>
+                        <li>Take the operation followed by operands as the arguments (e.g., <code>command add 1 2</code> or <code>command multiply 3 4</code>).</li>
+                        <li>Create a script using the <code>bin</code> part of <code>package.json</code>. Use <code>npm link</code> to test the script.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The program uses functions from <code>mathutils.js</code> for calculations.</li>
+                        <li>The module is reusable in other scripts.</li>
+                        <li>The script can be executed as a global command.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>To implement this exercise, the following steps were taken:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Created a Node.js script to handle command-line arguments using <code>process.argv</code>.</li>
+                        <li>Parsed the arguments and calculated their sum, ensuring to handle invalid inputs with appropriate error messages.</li>
+                        <li>Tested the script with both valid and invalid inputs to ensure robustness.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Enhanced the script to recognize a <code>--multiply</code> flag for multiplication operations.</li>
+                        <li>Updated the help text to clearly document the usage instructions for addition and multiplication operations.</li>
+                        <li>Validated the functionality of the flag with various input scenarios.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 3:</strong>
+                    <ul>
+                        <li>Extracted the <code>add</code> and <code>multiply</code> functions into a separate module (<code>mathutils.js</code>).</li>
+                        <li>Refactored the main script to use the exported functions from <code>mathutils.js</code>.</li>
+                        <li>Configured the script as a global command by adding a <code>bin</code> field in <code>package.json</code> and tested it using <code>npm link</code>.</li>
+                        <li>Verified that the script could be reused and executed globally with proper input handling.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>This approach ensures the program is modular, reusable, and follows best practices for command-line utility development.</p>
+        </section>
+    </main>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

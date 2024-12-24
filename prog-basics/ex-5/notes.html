@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5: Managing Environment Variables (dotenv)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 5: Managing Environment Variables (dotenv)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Install the <code>dotenv</code> library and create a <code>.env</code> file with configuration variables (e.g., <code>PORT</code>, <code>DB_HOST</code>).</li>
+                        <li>Load the variables into the program and use them for configuration.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The program reads and uses values from <code>.env</code>.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Add fallback values for missing environment variables.</li>
+                        <li>Log a warning when a variable is missing.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>The program handles missing variables gracefully.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Use environment variables to configure a database connection and API credentials. (You can use a SQLite file-based database for this exercise.)</li>
+                        <li>Securely log sensitive configuration details.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Sensitive information is handled securely.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>The following steps were taken to implement environment variable management:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Installed the <code>dotenv</code> library using <code>npm install dotenv</code>.</li>
+                        <li>Created a <code>.env</code> file with configuration variables such as <code>PORT</code> and <code>DB_HOST</code>.</li>
+                        <li>Loaded the environment variables in the program using <code>require('dotenv').config()</code>.</li>
+                        <li>Used the variables in the program to configure server ports and database hosts.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Added fallback values for missing environment variables using <code>process.env.VAR_NAME || 'default_value'</code>.</li>
+                        <li>Logged warnings using <code>winston</code> when essential variables were missing.</li>
+                        <li>Validated the program's ability to function with partial or missing configurations.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 3:</strong>
+                    <ul>
+                        <li>Configured a SQLite database connection using environment variables for the file path and credentials.</li>
+                        <li>Added API credentials (e.g., <code>supersecretapikey</code>) in the <code>.env</code> file and used them securely within the program.</li>
+                        <li>Used structured logging to securely log configuration details without exposing sensitive data (e.g., masking parts of the API key).</li>
+                        <li>Tested the program for security by ensuring sensitive information was not logged or exposed inappropriately.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>This approach ensures the secure and efficient management of configuration through environment variables, enhancing scalability and security.</p>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

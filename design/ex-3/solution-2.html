@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Zen Garden: The Beauty of CSS Design</title>
+    <link rel="stylesheet" media="screen" href="solution-2.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dave Shea">
+    <meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+</head>
+<body id="css-zen-garden">
+<div class="page-wrapper">
+    <section class="intro" id="zen-intro">
+        <header role="banner">
+            <h1 style="align-items: center; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="header-icon" viewBox="0 0 24 24" fill="white" width="40px" height="40px" style="align-items: center;">
+                    <path d="M12 0C5.372 0 0 5.372 0 12c0 6.627 5.372 12 12 12s12-5.373 12-12C24 5.372 18.628 0 12 0zm0 22c-5.514 0-10-4.486-10-10S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm-4.293-5.707l1.414 1.414L12 13.414l2.879 2.879 1.414-1.414L13.414 12l2.879-2.879-1.414-1.414L12 10.586 9.121 7.707 7.707 9.121 10.586 12z"/>
+                </svg>
+                CSS Zen Garden
+            </h1>
+            <h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+        </header>
+    </section>
+
+    <section class="main-content" id="zen-summary" role="main">
+        <div class="explanation">
+            <h3>So What is This About?</h3>
+            <p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To
+                begin, view some of the existing designs in the list. Clicking on any one will load the <code>CSS</code> file into this page. The HTML remains the same, the only thing that has changed is the external
+                <code>CSS</code> file. Yes, really.</p>
+        </div>
+        <div class="requirements">
+            <h3>Participation Requirements</h3>
+            <p>We only ask that you submit original designs. Modified versions of existing designs will not be accepted. This is about creative CSS
+                design; submit something unique. And by submitting, you agree to release your <abbr title="Cascading Style Sheets">CSS</abbr> work under the
+                <a href="https://opensource.org/licenses/MIT">MIT License</a>. As in, you retain ownership, but others can freely use your work to learn from and
+                experiment with.</p>
+        </div>
+    </section>
+
+    <section class="icon-grid">
+        <h3>Icon Grid</h3>
+        <div class="grid">
+            <!-- Font Awesome Icons -->
+            <i class="fas fa-star icon"></i>
+            <i class="fas fa-heart icon"></i>
+            <i class="fas fa-check icon"></i>
+            <!-- Inline SVG Icons -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px">
+                <path d="M21 11H6.414L12.707 4.707L11.293 3.293L2.586 12L11.293 20.707L12.707 19.293L6.414 13H21V11Z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px">
+                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM11 17v-2h2v2h-2zm0-4v-6h2v6h-2z"/>
+            </svg>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Benefits of CSS Design</h3>
+        <p>Using <abbr title="Cascading Style Sheets">CSS</abbr>, you can create stunning visual designs without altering the HTML content. This separation of content and style is crucial for responsive design and accessibility.</p>
+    </footer>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</div>
+</body>
+</html>

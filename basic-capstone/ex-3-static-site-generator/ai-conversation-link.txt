@@ -1,0 +1,3 @@
+LLM Used : Claude AI
+Name of the Chat : Amazon Clone Enhancement
+Link : In Claude there isn't a way of generating the chat link

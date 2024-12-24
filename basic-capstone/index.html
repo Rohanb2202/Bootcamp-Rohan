@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic-capstone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: #e8f5e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .explore-btn {
+            display: inline-flex;
+            align-items: center;
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .explore-btn:hover {
+            text-decoration: underline;
+        }
+
+        .explore-btn::after {
+            content: "→";
+            margin-left: 0.5rem;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yep You're on the Right Page🎓</h1>
+
+
+    
+        
+        <div class="grid">
+            <div class="card">
+                <div class="icon">🔧</div>
+                <h2>Data-Exploration</h2>
+                <p>It isn’t a real-time search engine for finding journals, but it’s more like a prototype that resembles the functionality of any other search engine.</p>
+                <a href="https://dainty-crumble-1f53b1.netlify.app/" class="explore-btn" target="_blank">Give it a Watch</a><br>
+                <a href="/basic-capstone/ex-1-data-exploration/notes.html" class="explore-btn" target="_blank">Notes</a>
+
+            </div>
+
+
+
+            <div class="card">
+                <div class="icon">☁️</div>
+                <h2>Web-Component</h2>
+                <p>Discover the weather forecast for your city and compare it with other cities nearby.</p>
+                <a href="https://enchanting-selkie-5c9084.netlify.app/" class="explore-btn" target="_blank">Give it a try</a><br>
+                <a href="/basic-capstone/ex-2-web-component-dev/notes.html" class="explore-btn" target="_blank">Notes</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📱</div>
+                <h2>Static-Site-Generator</h2>
+                <p>It isn’t an Amazon website, but a replica with some enhanced features, designed to pitch it to an Amazon executive.</p>
+                <a href="https://steady-mermaid-d03bdf.netlify.app/" class="explore-btn" target="_blank">Watch it out!</a><br>
+                <a href="/basic-capstone/ex-3-static-site-generator/notes.html" class="explore-btn" target="_blank">Notes</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<style>
+     .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+</style>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise 1</h2>
+            <ol>
+                <li>
+                    <strong>Level 1:</strong>
+                    <ul>
+                        <li>Create a web page (solution.html) that includes:</li>
+                        <li>A header with the title: "My First Webpage".</li>
+                        <li>A footer with contact info: "Contact: example@email.com".</li>
+                        <li>A main content area with:
+                            <ul>
+                                <li>An ordered list of three favorite movies.</li>
+                                <li>An unordered list of three favorite books.</li>
+                                <li>One image of your choice (use an accessible URL).</li>
+                            </ul>
+                        </li>
+                        <li>Use semantic elements like &lt;section&gt;, &lt;article&gt;, and &lt;aside&gt;.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 2:</strong>
+                    <ul>
+                        <li>Add a golden layout structure: header, two sidebars, and a main content area.</li>
+                        <li>Use &lt;nav&gt; for the sidebars to create a simple navigation menu with three links.</li>
+                        <li>Include a table listing three items with columns for name, price, and description.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 3:</strong>
+                    <ul>
+                        <li>Add dummy text to each section to make it look more complete.</li>
+                        <li>Ensure proper nesting and alignment of all elements.</li>
+                        <li>Make the content accessible by using alt text for images and clear labels for table headers.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            <p>I started by thoroughly reading and understanding the requirements for each level of the exercise. For Level 1, I focused on using semantic HTML elements like &lt;header&gt;, &lt;footer&gt;, and &lt;section&gt; to structure the webpage. I ensured that the content was simple and readable, with ordered and unordered lists styled appropriately. I added an image using a publicly accessible URL and provided alt text for accessibility.</p>
+
+            <p>For Level 2, I worked on creating a golden layout structure by dividing the page into a header, two sidebars, and a main content area. I used the &lt;nav&gt; element to create a simple navigation menu in the sidebars and added a table with well-defined columns for items, their prices, and descriptions.</p>
+
+            <p>In Level 3, I enriched the content by adding meaningful dummy text to make the page look complete and professional. I carefully ensured proper nesting and alignment of all elements and added alt attributes to images and clear labels to table headers to make the page more accessible. This step ensured compliance with web accessibility standards.</p>
+
+            <p>Throughout the process, I tested the webpage regularly in a browser to verify its layout and functionality. I refined the code where needed to maintain clean and readable HTML.</p>
+        </section>
+    </main>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

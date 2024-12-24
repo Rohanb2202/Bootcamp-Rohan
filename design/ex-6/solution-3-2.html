@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Government | News & Updates</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="solution-3-2.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Government of India News Portal</h1>
+            <nav class="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">Latest News</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Notifications</a>
+                <a href="#">Media Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search news, press releases..." />
+            <select id="departmentSelect">
+                <option value="All">All Departments</option>
+                <option value="Finance">Prime Minister's Office</option>
+                <option value="Finance">Ministry of Finance</option>
+                <option value="External">Ministry of External Affairs</option>
+                <option value="Defense">Ministry of Defense</option>
+            </select>
+        </section>
+
+        <div id="newsGrid" class="news-grid">
+            <!-- News cards will be dynamically inserted here -->
+        </div>
+
+        <section class="side-categories">
+            <h3>News Categories</h3>
+            <ul class="category-list">
+                <li><a href="#">Press Releases</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Government Orders</a></li>
+                <li><a href="#">Media Briefings</a></li>
+                <li><a href="#">Event Highlights</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Government of India. All Rights Reserved.</p>
+        <p>Designed for Digital India Initiative</p>
+    </footer>
+
+    <script>
+        // News data array
+        const newsData = [
+            {
+                id: 1,
+                title: 'Economic Reform Initiatives',
+                department: 'Finance',
+                date: '2024-12-15',
+                summary: 'Comprehensive strategy to boost economic growth and innovation across sectors.',
+                icon: 'newspaper'
+            },
+            {
+                id: 2,
+                title: 'International Diplomatic Engagement',
+                department: 'External',
+                date: '2024-12-10',
+                summary: 'Key discussions and bilateral meetings enhancing global cooperation.',
+                icon: 'globe'
+            },
+            {
+                id: 3,
+                title: 'National Security Updates',
+                department: 'Defense',
+                date: '2024-12-05',
+                summary: 'Strategic developments and defense preparedness initiatives.',
+                icon: 'shield-alt'
+            },
+            {
+                id: 4,
+                title: 'Digital Infrastructure Expansion',
+                department: 'Technology',
+                date: '2024-11-25',
+                summary: 'Major investments in digital infrastructure to support nationwide connectivity.',
+                icon: 'network-wired'
+            },
+            {
+                id: 5,
+                title: 'Healthcare Innovation Program',
+                department: 'Health',
+                date: '2024-11-20',
+                summary: 'New initiatives to modernize healthcare systems and improve public health.',
+                icon: 'newspaper'
+            }
+        ];
+
+        // Function to render news cards
+        function renderNewsCards(filteredNews) {
+            const newsGrid = document.getElementById('newsGrid');
+            newsGrid.innerHTML = ''; // Clear existing cards
+
+            if (filteredNews.length === 0) {
+                newsGrid.innerHTML = `
+                    <div class="no-results" style="grid-column: 1 / -1;">
+                        No news articles found matching your search.
+                    </div>
+                `;
+                return;
+            }
+
+            filteredNews.forEach(news => {
+                const newsCard = document.createElement('div');
+                newsCard.classList.add('news-card');
+                newsCard.innerHTML = `
+                    <div class="news-card-image">
+                        <i class="fas fa-${news.icon} fa-3x"></i>
+                    </div>
+                    <div class="news-card-content">
+                        <h2>${news.title}</h2>
+                        <p>${news.summary}</p>
+                        <div class="news-card-meta">
+                            <span>${news.date}</span>
+                            <span>${news.department} Ministry</span>
+                        </div>
+                    </div>
+                `;
+                newsGrid.appendChild(newsCard);
+            });
+        }
+
+        // Function to filter news
+        function filterNews() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const departmentSelect = document.getElementById('departmentSelect').value;
+
+            const filteredNews = newsData.filter(news => {
+                const matchesSearch = 
+                    news.title.toLowerCase().includes(searchInput) || 
+                    news.summary.toLowerCase().includes(searchInput);
+                
+                const matchesDepartment = 
+                    departmentSelect === 'All' || news.department === departmentSelect;
+
+                return matchesSearch && matchesDepartment;
+            });
+
+            renderNewsCards(filteredNews);
+        }
+
+        // Add event listeners for search and department filter
+        document.getElementById('searchInput').addEventListener('input', filterNews);
+        document.getElementById('departmentSelect').addEventListener('change', filterNews);
+
+        // Initial render
+        renderNewsCards(newsData);
+    </script>
+
+<button class="back-button" onclick="window.location.href='/index.html'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Back
+  </button>
+</body>
+</html>

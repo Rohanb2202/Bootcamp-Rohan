@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 1</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Objective</h2>
+            <p style="text-align: justify;">You have a list of research papers, which you can find on platforms like Kaggle. Your task is to build a UI to filter this data. The application should support the following features:</p>
+               <ul>
+                <li>Retrieve 1,000 papers from the backend.</li>
+                <li>Display them in a list of cards.</li>
+                <li>Implement a filter widget to filter the data based on specific criteria.</li>
+                <li>Add a search widget to search across all columns.</li>
+                <li>Provide functionality to export the filtered data as a zip file.</li>
+            </ul>
+           
+        </section>
+        <section>
+            <h2>My Approach</h2>
+            <ol>
+                <li>First and foremost, I focused on the core functionality. I decided to use vanilla JavaScript and modular code organization to keep things lightweight and maintainable. <br>I split the code into separate files: 
+                <ul>
+                    <li>A clean HTML structure in <code>index.html</code></li>
+                    <li><code>styles.css</code> for the visually pleasing UI</li>
+                    <li>Core functionality in <code>script.js</code></li>
+                </ul></li>
+                <li>For the design phase, I went with a modern, card-based layout that's both functional and visually appealing. I used CSS variables for consistent theming and made extensive use of Flexbox and Grid for responsive layouts. The color scheme focuses on readability with a professional blue palette. For this part I got assitance from our beloved friend Claude AI who really did some wonder on the stylesheet.</li>
+                <li> Since the data management is a crucial aspect, I built a system that:</li>
+                    <ul>
+                        <li>fetches the research papers data from JSON file.</li>
+                        <li>Maintained a separate arrays for all the papers and filtered results.</li>
+                        <li>Updates the display efficiently when the filters are been applied.</li>
+                        <li>Handles pagination calculations thoroughly.</li>   
+                    </ul>
+
+                <li>The filtering system was a key priority. I implemented:</li>
+                    <ul>
+                        <li>A real-time search functions that filters across multiple fields.</li>
+                        <li>Additionally, separate filters for institutions, journals and years.</li>
+                        <li>A clean way to reset all the applied filters so that the page reverts back to its initial state</li>
+                        <li>Finally export functionality for the filtered results</li>
+                    </ul>
+                
+    
+            </ol>
+        </section>
+        
+    </main>
+    <button class="back-button" onclick="window.location.href='https://stellular-marshmallow-b77b25.netlify.app/'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

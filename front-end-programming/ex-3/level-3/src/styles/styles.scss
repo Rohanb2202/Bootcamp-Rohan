@@ -1,0 +1,73 @@
+// Define variables for colors and breakpoints
+$colors: (
+  primary: #4a90e2,
+  hover: #45a049,
+  background: #f4f4f4,
+  button-bg: #4CAF50,
+  text: white
+);
+
+$sizes: (
+  small: 300px,
+  medium: 768px,
+  large: 1200px
+);
+
+// Body styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: map-get($colors, background);
+}
+
+// Dashboard container
+.dashboard-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+// Action buttons
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+// Generate button styles with a loop
+$button-states: (default: button-bg, hover: hover);
+
+.btn {
+  padding: 10px 15px;
+  background-color: map-get($colors, primary);
+  color: map-get($colors, text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  // Use loop for hover state
+  @each $state, $color in $button-states {
+    @if $state == hover {
+      &:hover {
+        background-color: map-get($colors, $color);
+      }
+    }
+  }
+}
+
+// Student grid
+#studentGrid {
+  height: 400px;
+  width: 100%;
+}
+
+// Responsive design with loop for breakpoints
+@each $name, $size in $sizes {
+  @media (max-width: $size) {
+    .dashboard-container {
+      font-size: if($name == small, 12px, 14px);
+    }
+  }
+}

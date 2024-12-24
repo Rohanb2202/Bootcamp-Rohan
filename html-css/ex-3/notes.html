@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        .back-button {
+               position: fixed;
+               bottom: 20px;
+               left: 20px;
+               padding: 12px 24px;
+               background-color: #3b82f6;
+               color: white;
+               border: none;
+               border-radius: 8px;
+               font-family: system-ui, -apple-system, sans-serif;
+               font-size: 16px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 8px;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
+   
+           .back-button:hover {
+               background-color: #2563eb;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           .back-button:active {
+               transform: translateY(0);
+           }
+   
+           /* Responsive adjustments */
+           @media (max-width: 768px) {
+               .back-button {
+                   padding: 10px 20px;
+                   font-size: 14px;
+               }
+           }
+   
+           @media (max-width: 480px) {
+               .back-button {
+                   bottom: 15px;
+                   left: 15px;
+                   padding: 8px 16px;
+               }
+           }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise-3</h2>
+            <ol>
+                  <li>  <strong>Level 1:</strong></li>
+                    <ul>
+                        <li>Take the blog post content provided:</li>
+                        <ul>
+                            <li>Title: "My Blog Post"</li>
+                            <li>Subtitle: "Exploring Classless CSS"</li>
+                            <li>Paragraph: "Classless CSS is a minimalistic way to style web pages without assigning classes or IDs to elements."</li>
+                        </ul>
+                        <li>Center-align the content and apply basic margins using classless CSS.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 2:</strong>
+                    <ul>
+                        <li>Add a list, blockquote, and an inline code snippet to the blog post.</li>
+                        <li>Style these elements using element selectors.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 3:</strong>
+                    <ul>
+                        <li>Use a classless CSS framework like classless.de. Experiment with few. Note down what you like and why. Use one of them to enhance the blog post's design.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            
+            <p>For the Third exercise, I started by structuring the blog post content with semantic HTML elements. I centered the content using classless CSS and ensured proper spacing for readability. To style the list, blockquote, and inline code snippet, I utilized element selectors, emphasizing clean and minimal design.
+            </p>
+
+            <p>At Level 3, I explored multiple classless CSS frameworks like classless.de and compared their features because priorly i wasn't familiar enough. I chose classless.de which best aligned with the simplicity and elegance of the blog's design and applied it to enhance the visual appeal of the post while maintaining the essence of classless CSS.</p>
+
+            <p>Throughout the exercises, I prioritized accessibility and clean coding practices.</p>
+        </section>
+    </main>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

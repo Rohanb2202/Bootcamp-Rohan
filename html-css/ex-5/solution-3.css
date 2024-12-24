@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: #f9f9f9;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "left-nav main right-nav";
+    grid-template-columns: minmax(150px, 0.5fr) minmax(300px, 2fr) minmax(150px, 0.5fr);
+    grid-template-rows: minmax(300px, auto);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Responsive breakpoints with dynamic area naming */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: minmax(120px, 0.4fr) minmax(250px, 1fr) minmax(120px, 0.4fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+            "left-nav"
+            "main"
+            "right-nav";
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+            minmax(min-content, auto) 
+            minmax(300px, auto) 
+            minmax(min-content, auto);
+    }
+}
+
+/* Dynamic grid area placement */
+.grid-container nav:first-child {
+    grid-area: left-nav;
+}
+
+.grid-container main {
+    grid-area: main;
+}
+
+.grid-container nav:last-child {
+    grid-area: right-nav;
+}
+
+nav {
+    background-color: #f1f1f1;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 450px;
+    border-radius: 8px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 500px;
+    scroll-behavior: smooth;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    background-color: aqua;
+    padding: 15px;
+    margin: 0;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+main table, main th, main td {
+    border: 1px solid #ccc;
+}
+
+main th, main td {
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+nav a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+}
+
+/* Ensure lists have consistent styling */
+nav ol, nav ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 16px;
+    }
+}

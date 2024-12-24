@@ -1,0 +1,74 @@
+/* Light Theme CSS */
+
+:root {
+    --primary-light: #1a73e8;
+    --secondary-light: #34495e;
+    --background-light: #f4f7f6;
+    --text-light: #2c3e50;
+    --accent-light: #ff5722;
+    --hero-gradient-start: #1a73e8;
+    --hero-gradient-end: #6a11cb;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+/* Intro Section */
+.intro {
+    background: linear-gradient(135deg, var(--hero-gradient-start), var(--hero-gradient-end));
+    color: white;
+}
+
+.intro h1 {
+    color: white;
+}
+
+.intro h2 {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Supporting Content */
+.main.supporting {
+    background-color: var(--background-light);
+}
+
+.supporting article {
+    background-color: white;
+    box-shadow: var(--card-shadow);
+}
+
+.supporting h3 {
+    color: var(--primary-light);
+    border-bottom-color: var(--primary-light);
+}
+
+/* Links */
+a {
+    color: var(--primary-light);
+}
+
+a:hover {
+    color: var(--accent-light);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-light);
+}
+
+/* Image Overlay */
+.image-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}

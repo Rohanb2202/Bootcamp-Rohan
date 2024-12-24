@@ -1,0 +1,3 @@
+LLM Used - ChatGPT
+Name of the Chat - Centered Layout with CSS
+Chat Link - https://chatgpt.com/share/675bc796-475c-8004-96e3-d627b286a815

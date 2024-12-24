@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .level-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .level-container h2 {
+            color: #3f51b5;
+            margin-top: 0;
+        }
+
+        .level-container img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .level-container a {
+            display: inline-block;
+            background-color: #3f51b5;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .level-container a:hover {
+            background-color: #303f9f;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise - 1 Solutions</h1>
+    </header>
+
+    <div class="container">
+        <div class="level-container">
+            <h2>Level - 1</h2>
+            <a href="#" id="level1-link">Toggle Screenshot</a>
+            <img id="level1-screenshot" src="screenshots/level-1.png" alt="Level-1 Screenshot">
+        </div>
+
+        <div class="level-container">
+            <h2>Level - 2</h2>
+            <a href="#" id="level2-link">Toggle Screenshot</a>
+            <img id="level2-screenshot" src="screenshots/level-2.png" alt="Level 2 Screenshot">
+        </div>
+
+        <div class="level-container">
+            <h2>Level - 3</h2>
+            <a href="#" id="level3-link">Toggle Screenshot</a>
+            <img id="level3-screenshot" src="screenshots/level-3.png" alt="Level 3 Screenshot">
+        </div>
+    </div>
+
+    <script>
+        const level1Link = document.getElementById('level1-link');
+        const level1Screenshot = document.getElementById('level1-screenshot');
+
+        const level2Link = document.getElementById('level2-link');
+        const level2Screenshot = document.getElementById('level2-screenshot');
+
+        const level3Link = document.getElementById('level3-link');
+        const level3Screenshot = document.getElementById('level3-screenshot');
+
+        level1Link.addEventListener('click', () => {
+            toggleScreenshot(level1Screenshot);
+        });
+
+        level2Link.addEventListener('click', () => {
+            toggleScreenshot(level2Screenshot);
+        });
+
+        level3Link.addEventListener('click', () => {
+            toggleScreenshot(level3Screenshot);
+        });
+
+        function toggleScreenshot(screenshot) {
+            if (screenshot.style.display === 'none') {
+                screenshot.style.display = 'block';
+            } else {
+                screenshot.style.display = 'none';
+            }
+        }
+    </script>
+
+<button class="back-button" onclick="window.location.href='/index.html'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Back
+</button>
+</body>
+</html>

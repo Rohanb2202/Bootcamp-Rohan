@@ -1,0 +1,74 @@
+/* Dark Theme CSS */
+
+:root {
+    --primary-dark: #4CAF50;
+    --secondary-dark: #2196F3;
+    --background-dark: #121212;
+    --text-dark: #e0e0e0;
+    --accent-dark: #FF5722;
+    --hero-gradient-start-dark: #6a11cb;
+    --hero-gradient-end-dark: #2575fc;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    --transition-speed: 0.3s;
+}
+
+body.dark-theme {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Intro Section */
+body.dark-theme .intro {
+    background: linear-gradient(135deg, var(--hero-gradient-start-dark), var(--hero-gradient-end-dark));
+    color: var(--text-dark);
+}
+
+body.dark-theme .intro h1 {
+    color: var(--text-dark);
+}
+
+body.dark-theme .intro h2 {
+    color: rgba(224,224,224,0.9);
+}
+
+/* Supporting Content */
+body.dark-theme .main.supporting {
+    background-color: var(--background-dark);
+}
+
+body.dark-theme .supporting article {
+    background-color: #2a2a2a;
+    box-shadow: var(--card-shadow);
+}
+
+body.dark-theme .supporting h3 {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+}
+
+/* Links */
+body.dark-theme a {
+    color: var(--secondary-dark);
+}
+
+body.dark-theme a:hover {
+    color: var(--accent-dark);
+}
+
+/* Theme Toggle */
+body.dark-theme .theme-toggle {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Image Overlay */
+body.dark-theme .image-overlay {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-dark);
+}

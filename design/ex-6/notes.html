@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Analysis Notes</title>
+</head>
+
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h2{
+  
+    padding: 20px;
+    text-align: center; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Section Styling */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+section h2 {
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #007acc;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* List Styling */
+ol, ul {
+    margin: 10px 0 20px 20px;
+    padding: 0;
+}
+
+ol li, ul li {
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007acc;
+    color: #fff;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* Highlight Specific Classes */
+.bug-list {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffeded;
+    border-left: 4px solid #ff6b6b;
+    list-style-type: square;
+}
+
+.recommendations {
+    background: #e7f9f0;
+    border-left: 4px solid #34c759;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.recommendations h3 {
+    margin-top: 0;
+    color: #34c759;
+}
+
+/* Footer (if needed) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007acc;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}
+
+.back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 16px;
+            }
+        }
+
+
+</style>
+<body>
+    <header>
+        <h1>Website Analysis Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <h3>Indian Government Press Releases</h3>
+                    <p>Annotated the website using the screenshot tool to identify issues such as outdated design, lack of responsive elements, and poor navigation. Suggested the US Department of State website as inspiration for its modern layout, accessibility, and clear categorization of press releases.</p>
+                </li>
+                <li>
+                    <h3>IITM CSE Faculty Site</h3>
+                    <p>Highlighted issues like inconsistent layouts and outdated UI. Suggested the Stanford University faculty pages as a reference for their clean design and comprehensive faculty profiles.</p>
+                </li>
+                <li>
+                    <h3>IIT B Talk</h3>
+                    <p>Annotated issues related to readability and user engagement. Suggested TED Talks as inspiration for its minimalist yet impactful design and user-friendly video categorization.</p>
+                </li>
+                <li>
+                    <h3>Indian Railways Website</h3>
+                    <p>Noted problems such as cluttered information and lack of mobile optimization. Recommended Amtrak's website for its modern interface, streamlined booking process, and responsive design.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <h3>Flipkart vs. Amazon Mobile Phones Page</h3>
+                    <p>Compared the two websites for design and information structure. Noted that Amazon offers a cleaner layout with better filters, while Flipkart excels in personalized recommendations.</p>
+                </li>
+                <li>
+                    <h3>State of Telangana vs. State of Michigan</h3>
+                    <p>Analyzed the websites for services offered and design. Highlighted that Michigan's website focuses on accessibility and user-centric design, whereas Telangana's website could improve in categorization and responsiveness.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <h3>Redesign: Indian Government Press Releases</h3>
+                    <p>Redesigned the press release section with a cleaner layout, improved navigation, and added responsive elements for better mobile usability.</p>
+                </li>
+                <li>
+                    <h3>Redesign: IITM CSE Faculty Site</h3>
+                    <p>Focused on creating a uniform layout with easy-to-navigate faculty profiles, incorporating modern design elements and improved accessibility.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+
+            <h2>Level 1 Solution</h2>
+            <img src="https://awesomescreenshot.s3.amazonaws.com/image/5974818/52057818-83e03aa0771f071eb7dee4c75fb7fdf3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20241215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241215T152749Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=ef240494b554fc77dbf13b467400de46dbcb51416f385db109b6243e7d00682d" loading="eager" alt="irctc">
+            <img src="https://awesomescreenshot.s3.amazonaws.com/image/5974818/52057802-82165f32ca29f1f05ea3eb36d60ed543.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20241215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241215T153118Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=ef7f530c9cf3196de572abac19e5cbf432c3ca48378e193ea7d498393591ec68" loading="eager" alt="single faculty">
+            <img src="https://awesomescreenshot.s3.amazonaws.com/image/5974818/52056463-48e7a9446e03c6f7655fed3437541a44.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20241215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241215T153226Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=d93c39dfc88b4bcdf736393b6ed4d18a0a8cc01899f102457f9303cfae95fafe" loading="eager" alt="press release">
+            <img src="https://awesomescreenshot.s3.amazonaws.com/image/5974818/52057769-ad0e138783c9ce8f70cf49806bed96c6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20241215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241215T153320Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=63a495419a12660693a8232ff10425285a952b716137d1f68764e4cc310defab" loading="eager" alt="single press release">
+            <img src="https://awesomescreenshot.s3.amazonaws.com/image/5974818/52057794-40e797024d95e618ad957177e5dca155.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20241215%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241215T153517Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=c2e0cf7cb3c3bc46ac512b23ba498a4101ee2693190b2ced83d504953da8a26f" loading="eager" alt="IITM Faculties">
+            <p><p>
+
+        </section>
+        <main>
+            <section>
+                <h2>Level 1</h2>
+                <ol>
+                    <li>
+                        <h3>Indian Government Press Releases</h3>
+                        <p>Current State Analysis:</p>
+                        <ul>
+                            <li><strong>Fonts:</strong> Likely using default system fonts with poor typographic hierarchy, inconsistent sizes, and weights.</li>
+                            <li><strong>Colors:</strong> Dull and uninspiring color palette with low contrast, impacting readability.</li>
+                            <li><strong>Layout:</strong> Cluttered and information-dense with minimal white space and poor organization.</li>
+                        </ul>
+                        <p>Comparison: US Department of State Website</p>
+                        <ul>
+                            <li>Clear typographic hierarchy</li>
+                            <li>Consistent color scheme</li>
+                            <li>Responsive design and easy navigation</li>
+                            <li>Better use of white space</li>
+                            <li>Visually appealing press release presentation</li>
+                        </ul>
+                        <p>Suggested Improvements:</p>
+                        <ul>
+                            <li>Implement a clear, readable font hierarchy</li>
+                            <li>Adopt a modern and engaging color palette</li>
+                            <li>Improve information architecture and organization</li>
+                            <li>Add more white space for clarity</li>
+                            <li>Design for a user-centric experience</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>IITM CSE Faculty Site</h3>
+                        <p>Current State Analysis:</p>
+                        <ul>
+                            <li><strong>Fonts:</strong> Default institutional fonts lacking consistency and differentiation between headings and body text.</li>
+                            <li><strong>Colors:</strong> Outdated palette with minimal visual hierarchy.</li>
+                            <li><strong>Layout:</strong> Cluttered and uninspired grid-based design, non-responsive.</li>
+                            <li><strong>Images:</strong> Inconsistent photo quality and no standardized treatment.</li>
+                            <li><strong>Icons:</strong> Minimal or outdated iconography, lacking visual consistency.</li>
+                        </ul>
+                        <p>Comparison: Stanford CS Faculty Page</p>
+                        <ul>
+                            <li>Modern, clean design</li>
+                            <li>Consistent photo treatment</li>
+                            <li>Clear hierarchy and easy navigation</li>
+                            <li>Responsive layout</li>
+                            <li>Visually engaging presentation</li>
+                        </ul>
+                        <p>Suggested Improvements:</p>
+                        <ul>
+                            <li>Standardize faculty photos with professional, high-quality headshots</li>
+                            <li>Organize information into clear sections: Research, Publications, Contact</li>
+                            <li>Adopt modern fonts with a clear hierarchy</li>
+                            <li>Enhance responsiveness and accessibility</li>
+                            <li>Use colors strategically for guidance and emphasis</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>IIT B Talk</h3>
+                        <p>Current State Analysis:</p>
+                        <ul>
+                            <li><strong>Fonts:</strong> Inconsistent usage with minimal typographic design.</li>
+                            <li><strong>Colors:</strong> Limited palette, low contrast affecting readability.</li>
+                            <li><strong>Layout:</strong> Cluttered and non-responsive, lacking visual hierarchy.</li>
+                            <li><strong>Icons:</strong> Minimal, outdated, and inconsistent iconography.</li>
+                            <li><strong>Images:</strong> Inconsistent quality and no standardization.</li>
+                        </ul>
+                        <p>Comparison: TED Talks Website</p>
+                        <ul>
+                            <li>Modern, clean design with visual hierarchy</li>
+                            <li>Responsive and intuitive navigation</li>
+                            <li>Clear content categorization</li>
+                            <li>Consistent and engaging image presentation</li>
+                        </ul>
+                        <p>Suggested Improvements:</p>
+                        <ul>
+                            <li>Adopt a consistent design language with grid-based layout</li>
+                            <li>Use modern fonts with clear hierarchy</li>
+                            <li>Develop a strategic, high-contrast color palette</li>
+                            <li>Enhance content presentation with filtering and search capabilities</li>
+                            <li>Introduce smooth transitions and hover states for interactivity</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Indian Railways Website</h3>
+                        <p>Current State Analysis:</p>
+                        <ul>
+                            <li><strong>Fonts:</strong> Default system fonts with poor readability and inconsistent typography.</li>
+                            <li><strong>Colors:</strong> Traditional government scheme with low contrast and minimal appeal.</li>
+                            <li><strong>Layout:</strong> Cluttered interface with information overload and minimal white space.</li>
+                            <li><strong>Icons:</strong> Outdated and inconsistent design, offering little visual guidance.</li>
+                            <li><strong>Images:</strong> Poor quality and inconsistent treatment.</li>
+                        </ul>
+                        <p>Comparison: Japan Railways (JR) Website</p>
+                        <ul>
+                            <li>Clean and intuitive navigation</li>
+                            <li>Simplified booking process</li>
+                            <li>Responsive, user-centric design</li>
+                            <li>Strategic use of visuals and multilingual support</li>
+                        </ul>
+                        <p>Suggested Improvements:</p>
+                        <ul>
+                            <li>Streamline navigation and reorganize content</li>
+                            <li>Simplify the booking process with clear progress indicators</li>
+                            <li>Use modern fonts and color schemes for readability</li>
+                            <li>Enhance responsiveness and cross-device compatibility</li>
+                            <li>Add interactive elements like hover states and smooth transitions</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+    
+            
+        </main>
+
+        <section>
+            <h2>Approach</h2>
+            <p>To address these tasks, I first identified key usability issues through screenshots and annotations. Then, I researched and selected better-designed websites as references. For comparisons, I analyzed layout, information structure, and user experience. Finally, I implemented redesigns by focusing on modern web design principles, responsiveness, and user-centric layouts.</p>
+        </section>
+    </main>
+    <h2>Level 2 Solution</h2>
+        <h2>Comparative Analysis: State of Telangana vs State of Michigan Websites</h2>
+
+    <main>
+        <section>
+            <h2>1. Overall Design and Information Architecture</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Telangana</th>
+                    <th>Michigan</th>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td>Likely government-style design, potentially cluttered interface</td>
+                    <td>More modern, user-centered design</td>
+                </tr>
+                <tr>
+                    <td>Information Architecture</td>
+                    <td>Traditional presentation, minimal modern design elements</td>
+                    <td>Clear navigation, responsive layout, intuitive organization</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2. Visual Design Elements</h2>
+            <h3>Typography</h3>
+            <ul>
+                <li><strong>Telangana:</strong> Probable use of default system fonts, inconsistent text hierarchy, limited sophistication</li>
+                <li><strong>Michigan:</strong> Clean, professional typography, clear text hierarchy, consistent usage</li>
+            </ul>
+            <h3>Color Scheme</h3>
+            <ul>
+                <li><strong>Telangana:</strong> Likely uses state colors, potentially dated palette, limited accessibility</li>
+                <li><strong>Michigan:</strong> Strategic use of colors, modern application, better contrast and readability</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Information Presentation</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Telangana</th>
+                    <th>Michigan</th>
+                </tr>
+                <tr>
+                    <td>Content Design</td>
+                    <td>Dense information blocks, less user-friendly navigation</td>
+                    <td>Modular content, card-based layout, engaging visuals</td>
+                </tr>
+                <tr>
+                    <td>Navigation</td>
+                    <td>Minimal visual elements, potentially overwhelming</td>
+                    <td>Clear section divisions, interactive elements</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>4. Key Service Offerings</h2>
+            <ul>
+                <li><strong>Telangana:</strong> Focus on administrative information, less emphasis on user experience, complex service access</li>
+                <li><strong>Michigan:</strong> User-centric presentation, clear pathways to services, interactive and intuitive elements</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Technological Aspects</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Telangana</th>
+                    <th>Michigan</th>
+                </tr>
+                <tr>
+                    <td>Website Infrastructure</td>
+                    <td>Basic infrastructure, minimal interactive features</td>
+                    <td>Modern technologies, responsive across devices</td>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>Potential issues, less optimized</td>
+                    <td>Better performance optimization</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Key Differences in Design Philosophy</h2>
+            <ul>
+                <li><strong>User Orientation:</strong> Telangana: Administrative-first | Michigan: User-first</li>
+                <li><strong>Information Accessibility:</strong> Telangana: Complex, dense | Michigan: Simplified, navigable</li>
+                <li><strong>Digital Modernization:</strong> Telangana: Traditional | Michigan: Digital-first</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Recommended Improvements</h2>
+            <div class="recommendations">
+                <h3>For Telangana Website</h3>
+                <ul>
+                    <li>Implement responsive design</li>
+                    <li>Create clear navigation pathways</li>
+                    <li>Improve typography and readability</li>
+                    <li>Add user-friendly service interfaces</li>
+                    <li>Enhance visual design with modern elements</li>
+                    <li>Optimize website performance</li>
+                    <li>Implement accessibility standards</li>
+                </ul>
+
+                <h3>For Michigan Website</h3>
+                <ul>
+                    <li>Further localize content</li>
+                    <li>Add more multilingual support</li>
+                    <li>Enhance mobile user experience</li>
+                    <li>Create more intuitive service categorization</li>
+                    <li>Implement more region-specific interactive features</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Overall Observation</h2>
+            <p>The Michigan website represents a more advanced approach to government digital services, showcasing how technology can make information and services more accessible and user-friendly. The Telangana website, while functional, has significant room for improvement in design, user experience, and digital service delivery.</p>
+        </section>
+    </main>
+    
+        <h2>Comparative Analysis: Flipkart vs Amazon Mobile Phones Page</h2>
+
+    <main>
+        <section>
+            <h2>1. Overall Layout and Information Structure</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Flipkart</th>
+                    <th>Amazon</th>
+                </tr>
+                <tr>
+                    <td>Layout</td>
+                    <td>Typical Indian e-commerce layout, grid-based product display, heavy use of promotional banners</td>
+                    <td>More structured, clean layout, advanced filtering options, better use of white space</td>
+                </tr>
+                <tr>
+                    <td>Information Structure</td>
+                    <td>Potentially cluttered interface</td>
+                    <td>More systematic product presentation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>2. Design Elements</h2>
+            <h3>Typography</h3>
+            <ul>
+                <li><strong>Flipkart:</strong> Likely uses more playful, casual fonts, inconsistent text sizes, less emphasis on readability</li>
+                <li><strong>Amazon:</strong> Consistent, clean typography, clear hierarchy of information, easy-to-read font choices</li>
+            </ul>
+            <h3>Color Scheme</h3>
+            <ul>
+                <li><strong>Flipkart:</strong> Bright, attention-grabbing colors, more vibrant design, potential visual overload</li>
+                <li><strong>Amazon:</strong> Neutral color palette, subtle use of brand colors, focuses on product imagery, less distracting design</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Product Presentation</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Flipkart</th>
+                    <th>Amazon</th>
+                </tr>
+                <tr>
+                    <td>Promotional Content</td>
+                    <td>Large promotional cards, discount-heavy presentation</td>
+                    <td>Clean, consistent product cards, balanced information display</td>
+                </tr>
+                <tr>
+                    <td>Visual Hierarchy</td>
+                    <td>More emphasis on price, potentially overwhelming</td>
+                    <td>Clear product information, more professional presentation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>4. Filtering and Navigation</h2>
+            <ul>
+                <li><strong>Flipkart:</strong> Basic filtering options, less intuitive navigation, fewer refined search capabilities</li>
+                <li><strong>Amazon:</strong> Advanced, multi-level filtering, comprehensive search options, easier to narrow down product choices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. User Experience Considerations</h2>
+            <ul>
+                <li><strong>Flipkart:</strong> Designed for price-sensitive market, more aggressive marketing approach, targets impulse purchasing, mobile-first design</li>
+                <li><strong>Amazon:</strong> Information-rich experience, focuses on detailed product information, emphasizes user reviews, more global design standards</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Differences in Design Philosophy</h2>
+            <ul>
+                <li><strong>Information Density:</strong> Flipkart: High-density, information-packed | Amazon: Balanced, breathable layout</li>
+                <li><strong>Visual Approach:</strong> Flipkart: Vibrant, promotional | Amazon: Neutral, product-focused</li>
+                <li><strong>User Interaction:</strong> Flipkart: More interactive, gamified | Amazon: More structured, systematic</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Recommended Improvements</h2>
+            <div class="recommendations">
+                <h3>For Flipkart</h3>
+                <ul>
+                    <li>Reduce visual clutter</li>
+                    <li>Improve filtering mechanisms</li>
+                    <li>Create more consistent typography</li>
+                    <li>Balance promotional content with product information</li>
+                    <li>Implement more sophisticated user experience design</li>
+                </ul>
+
+                <h3>For Amazon India</h3>
+                <ul>
+                    <li>Localize design more aggressively</li>
+                    <li>Add more region-specific filtering</li>
+                    <li>Incorporate more competitive pricing visibility</li>
+                    <li>Enhance mobile responsiveness</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Overall Recommendation</h2>
+            <p>Both platforms have strengths. Flipkart excels in capturing the Indian market's aesthetic and price sensitivity, while Amazon provides a more globally standardized, information-rich experience.</p>
+        </section>
+    </main>
+
+ 
+
+    <h2>Website Usability and Technical Bugs</h2>
+
+        <h2>Indian Government Press Releases</h2>
+        <ul class="bug-list">
+            <li><strong>Potential Cross-Browser Compatibility Issues</strong></li>
+            <li><strong>Likely Poor Mobile Responsiveness</strong></li>
+            <li><strong>Accessibility Violations (Color Contrast)</strong></li>
+            <li><strong>Potential Performance Bottlenecks</strong></li>
+            <li><strong>Non-Semantic HTML Structure</strong></li>
+        </ul>
+
+        <h2>IITM CSE Faculty Site</h2>
+        <ul class="bug-list">
+            <li><strong>Broken Image Links</strong></li>
+            <li><strong>Inconsistent Image Sizes</strong></li>
+            <li><strong>Potential Security Vulnerabilities in Form Handling</strong></li>
+            <li><strong>Lack of Alt Text for Images</strong></li>
+            <li><strong>Non-Responsive Design</strong></li>
+            <li><strong>Potential Performance Issues with Large Images</strong></li>
+        </ul>
+
+        <h2>IIT B Talk</h2>
+        <ul class="bug-list">
+            <li><strong>Broken Navigation Links</strong></li>
+            <li><strong>Inconsistent UI Elements</strong></li>
+            <li><strong>Poor Form Validation</strong></li>
+            <li><strong>Potential Cross-Site Scripting (XSS) Vulnerabilities</strong></li>
+            <li><strong>Lack of HTTPS Implementation</strong></li>
+            <li><strong>Slow Page Load Times</strong></li>
+        </ul>
+
+        <h2>Indian Railways Website</h2>
+        <ul class="bug-list">
+            <li><strong>Critical Booking Process Bugs</strong></li>
+            <li><strong>Payment Gateway Integration Issues</strong></li>
+            <li><strong>Session Management Vulnerabilities</strong></li>
+            <li><strong>CAPTCHA Implementation Problems</strong></li>
+            <li><strong>High Server Response Time</strong></li>
+            <li><strong>Potential SQL Injection Vulnerabilities</strong></li>
+            <li><strong>Incomplete Error Handling</strong></li>
+        </ul>
+
+        <h2>Flipkart Mobile Phones Page</h2>
+        <ul class="bug-list">
+            <li><strong>Price Calculation Errors</strong></li>
+            <li><strong>Inventory Sync Issues</strong></li>
+            <li><strong>Mobile Responsiveness Bugs</strong></li>
+            <li><strong>Performance Lag on Low-End Devices</strong></li>
+            <li><strong>Potential Cross-Browser Rendering Problems</strong></li>
+        </ul>
+
+        <h2>State of Telangana Website</h2>
+        <ul class="bug-list">
+            <li><strong>Broken External Links</strong></li>
+            <li><strong>Incomplete Form Submissions</strong></li>
+            <li><strong>Lack of Input Validation</strong></li>
+            <li><strong>Poor Error Messaging</strong></li>
+            <li><strong>Potential Data Leakage</strong></li>
+            <li><strong>Outdated Security Protocols</strong></li>
+        </ul>
+
+        <h2>Common Recurring Bugs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bug Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Non-Responsive Design</td>
+                    <td>Websites are not optimized for mobile and tablet devices, causing poor user experience on different screen sizes.</td>
+                </tr>
+                <tr>
+                    <td>Poor Accessibility</td>
+                    <td>Color contrast issues and lack of screen reader support make websites difficult for users with disabilities.</td>
+                </tr>
+                <tr>
+                    <td>Inconsistent User Interface</td>
+                    <td>Different pages or sections have varying designs and layout inconsistencies, making navigation confusing.</td>
+                </tr>
+                <tr>
+                    <td>Performance Issues</td>
+                    <td>Slow load times, especially for images and forms, affect user experience.</td>
+                </tr>
+                <tr>
+                    <td>Security Vulnerabilities</td>
+                    <td>Exposed vulnerabilities like XSS, SQL injection, and improper form handling pose a risk to user data.</td>
+                </tr>
+                <tr>
+                    <td>Broken Links and Form Handling</td>
+                    <td>Non-functional links and forms that don't submit data correctly hinder website functionality.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

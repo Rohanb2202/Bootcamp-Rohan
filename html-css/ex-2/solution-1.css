@@ -1,0 +1,167 @@
+/* Import Variables */
+@import url('variable-1.css');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: var(--body-font-size);
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--margin-large);
+}
+
+header h1 {
+    font-size: var(--header-font-size-large);
+    margin-bottom: var(--margin-medium);
+}
+
+header p {
+    font-size: var(--body-font-size);
+}
+
+/* Navigation Styling */
+nav h2 {
+    color: var(--primary-color);
+    font-size: var(--header-font-size-medium);
+    margin-bottom: var(--margin-medium);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: var(--margin-small);
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: var(--margin-medium);
+}
+
+nav ul li {
+    margin-bottom: var(--margin-small);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content Styling */
+h2 {
+    color: var(--primary-color);
+    font-size: var(--header-font-size-medium);
+    margin-bottom: var(--margin-medium);
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--margin-large);
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: var(--margin-small);
+    text-align: left;
+}
+
+tr:nth-child(even,odd) {
+    background-color: #f2f2f2;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--margin-medium);
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 var(--margin-small);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Considerations */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: var(--header-font-size-medium);
+    }
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        left: 15px;
+        padding: 8px 16px;
+    }
+}

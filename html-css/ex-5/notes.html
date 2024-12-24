@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        .back-button {
+               position: fixed;
+               bottom: 20px;
+               left: 20px;
+               padding: 12px 24px;
+               background-color: #3b82f6;
+               color: white;
+               border: none;
+               border-radius: 8px;
+               font-family: system-ui, -apple-system, sans-serif;
+               font-size: 16px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 8px;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
+   
+           .back-button:hover {
+               background-color: #2563eb;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           .back-button:active {
+               transform: translateY(0);
+           }
+   
+           /* Responsive adjustments */
+           @media (max-width: 768px) {
+               .back-button {
+                   padding: 10px 20px;
+                   font-size: 14px;
+               }
+           }
+   
+           @media (max-width: 480px) {
+               .back-button {
+                   bottom: 15px;
+                   left: 15px;
+                   padding: 8px 16px;
+               }
+           }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise-5</h2>
+            <ol>
+                <li>
+                    <strong>Level 1:</strong>
+                    <ul>
+                        <li>Design a golden layout with header, two sidebars, and main content.</li>
+                        <li>Use grid-template-areas to define the layout.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 2:</strong>
+                    <ul>
+                        <li>Handle overflow content in the main content area.</li>
+                        <li>Adjust grid properties to ensure the layout remains consistent at different screen sizes.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Level 3:</strong>
+                    <ul>
+                        <li>Use minmax() for grid rows and columns to define flexible sizing.</li>
+                        <li>Name grid areas dynamically and adjust layout for mobile screens.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+    
+            <p>For this golden layout exercise, I utilized CSS Grid's grid-template-areas property to define a layout with a header, two sidebars,a main content area and I've defined the same data which was done on Exercise-1. Each section was assigned a grid area, making the structure both flexible and visually distinct. Handling overflow content in the main area was achieved by setting overflow properties and ensuring proper padding for readability.</p>
+
+            <p>To make the layout responsive, I adjusted grid properties using media queries and employed the minmax() function to create flexible grid sizing. Naming grid areas dynamically allowed me to restructure the layout for smaller screens, ensuring optimal usability on mobile devices. This approach emphasized the adaptability and scalability of CSS Grid in modern web design.</p>
+
+            <p>Throughout these exercises, I focused on modular, maintainable code and ensured consistent testing to verify that each feature worked as intended across different scenarios.</p>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+   
+</body>
+</html>

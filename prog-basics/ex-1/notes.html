@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Setting Up npm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 1: Setting Up npm</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Initialize a new Node.js project using <code>npm init</code>.</li>
+                        <li>Add a <code>start</code> script to run a basic <code>index.js</code> file.</li>
+                        <li>Add a <code>dev</code> script to run the same file with debugging output (<code>DEBUG=* node index.js</code>).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Running <code>npm start</code> executes <code>index.js</code>.</li>
+                        <li>Running <code>npm run dev</code> shows debugging output.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Install the <code>chalk</code> package and use it in <code>index.js</code> to style console outputs.</li>
+                        <li>Add <code>nodemon</code> as a dev dependency and use it to automatically restart the program during development.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li><code>index.js</code> outputs styled messages using <code>chalk</code>.</li>
+                        <li>Changes to <code>index.js</code> automatically restart when using <code>nodemon</code>.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Add a <code>prestart</code> script to ensure <code>node_modules</code> is available before running the program.</li>
+                        <li>Test by removing <code>node_modules</code> and ensuring <code>npm start</code> runs successfully after reinstalling dependencies.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li><code>prestart</code> script checks for <code>node_modules</code> and reinstalls dependencies if missing.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>To complete the exercise, the following steps were taken:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Initialized a new Node.js project using <code>npm init</code>, providing default answers to streamline the setup process.</li>
+                        <li>Created a basic <code>index.js</code> file with a simple <code>console.log</code> message for testing.</li>
+                        <li>Added scripts in <code>package.json</code> to enable easy execution: <code>start</code> for running the file and <code>dev</code> for debugging output.</li>
+                        <li>Validated the functionality by running <code>npm start</code> and <code>npm run dev</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Installed the <code>chalk</code> package and modified <code>index.js</code> to output styled messages using it.</li>
+                        <li>Installed <code>nodemon</code> as a development dependency and updated the <code>dev</code> script to use it for automatic restarts.</li>
+                        <li>Tested by modifying <code>index.js</code> to confirm that <code>nodemon</code> detected changes and restarted the program automatically.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 3:</strong>
+                    <ul>
+                        <li>Created a <code>prestart</code> script in <code>package.json</code> to check for the existence of <code>node_modules</code>.</li>
+                        <li>Simulated the absence of <code>node_modules</code> by deleting the folder and confirmed that <code>npm start</code> reinstalled dependencies as needed.</li>
+                        <li>Ensured seamless execution by verifying that the program ran correctly after the dependencies were reinstalled.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Throughout the process, attention was paid to using best practices for dependency management and script configuration, ensuring a clean and reusable setup.</p>
+        </section>
+        
+    </main>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

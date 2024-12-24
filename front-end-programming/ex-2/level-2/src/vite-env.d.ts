@@ -1,0 +1,13 @@
+/// <reference types="vite/client" />
+
+/// <reference types="vite/client" />
+
+declare module '*.csv' {
+    const content: string;
+    export default content;
+}
+
+declare module '*.csv?url' {
+    const content: string;
+    export default content;
+}

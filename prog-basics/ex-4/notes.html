@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Debugging (debug)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 4: Debugging (debug)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Level 1</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Install the <code>debug</code> package and set up a namespace for debugging.</li>
+                        <li>Use the <code>debug</code> function to log messages in a single module.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Debug messages are displayed when the <code>DEBUG</code> environment variable is set.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Extend the program with multiple modules, each having its own debug namespace.</li>
+                        <li>Use environment variables to selectively enable debugging for specific modules.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Debugging can be turned on/off for individual modules.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Level 3</h2>
+            <ol>
+                <li>
+                    <strong>Problem Description:</strong>
+                    <ul>
+                        <li>Combine <code>debug</code> with <code>winston</code> for structured debugging and logging.</li>
+                        <li>Use both tools to debug and log a complex program scenario.</li>
+                        <li>Enhance the compute program by making it interactive.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Exit Criteria:</strong>
+                    <ul>
+                        <li>Debug and log messages work seamlessly together.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Approach</h2>
+            <p>The following steps were taken to implement selective debugging:</p>
+            <ol>
+                <li><strong>Level 1:</strong>
+                    <ul>
+                        <li>Installed the <code>debug</code> package using <code>npm install debug</code>.</li>
+                        <li>Created a single module with a unique debug namespace (e.g., <code>my-module</code>).</li>
+                        <li>Used the <code>debug</code> function to log messages at key points in the module.</li>
+                        <li>Tested the setup by setting the <code>DEBUG</code> environment variable to the namespace and running the script.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 2:</strong>
+                    <ul>
+                        <li>Extended the program to include multiple modules, each with its own debug namespace (e.g., <code>moduleA</code>, <code>moduleB</code>).</li>
+                        <li>Configured the environment variable to selectively enable debugging for specific modules (e.g., <code>DEBUG=myapp:module2</code>).</li>
+                        <li>Verified that debug messages were displayed only for the enabled namespaces.</li>
+                    </ul>
+                </li>
+                <li><strong>Level 3:</strong>
+                    <ul>
+                        <li>Integrated <code>winston</code> for structured logging alongside <code>debug</code>.</li>
+                        <li>Enhanced the compute program by making it interactive, allowing users to input operations and numbers via the command line.</li>
+                        <li>Used <code>debug</code> for selective debugging and <code>winston</code> for permanent logging of important events.</li>
+                        <li>Tested the program to ensure debug and log messages worked seamlessly together, providing both real-time and structured logs.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>This approach ensures efficient debugging and structured logging for scalable and maintainable applications.</p>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

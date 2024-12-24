@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Hierarchy Principles Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="solution-2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero glass-effect">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1>Discover Compelling Stories</h1>
+                <p>Dive into a world of insights, innovation, and inspiration through carefully curated narratives that challenge and enlighten.</p>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="featured-articles">
+            <article class="article-card">
+                <img src="https://picsum.photos/400/300?random=1" alt="Technology Trends">
+                <div class="article-content">
+                    <h2>Technology Trends</h2>
+                    <p>Exploring cutting-edge innovations that are reshaping our digital landscape and future possibilities.</p>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://picsum.photos/400/300?random=2" alt="Climate Solutions">
+                <div class="article-content">
+                    <h2>Climate Solutions</h2>
+                    <p>Innovative approaches and groundbreaking strategies to address global environmental challenges.</p>
+                </div>
+            </article>
+            <article class="article-card">
+                <img src="https://picsum.photos/400/300?random=3" alt="Human Potential">
+                <div class="article-content">
+                    <h2>Human Potential</h2>
+                    <p>Inspiring stories of resilience, creativity, and the extraordinary capabilities of the human spirit.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Insight Magazine. All rights reserved.</p>
+        </footer>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator"></div>    
+    </div>
+     <script>
+    const scrollIndicator = document.getElementById('scrollIndicator');
+
+    window.addEventListener('scroll', function() {
+        // Calculate the total scrollable height
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        
+        // Calculate the current scroll position
+        const scrollPosition = window.scrollY;
+        
+        // Check if user has scrolled to the bottom with a small threshold
+        if (scrollPosition >= scrollableHeight - 10) {
+            // Hide the scroll indicator when bottom is reached
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+        } else {
+            // Show the scroll indicator if not at bottom
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+        }
+    });
+    
+    // Optional: Initial check in case the page loads with scroll
+    function checkScrollPosition() {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition >= scrollableHeight - 10) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+        }
+    }
+    
+    // Call on page load and scroll
+    window.addEventListener('load', checkScrollPosition);
+    window.addEventListener('scroll', checkScrollPosition);
+    </script>
+
+<button class="back-button" onclick="window.location.href='/index.html'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Back
+  </button>
+</body>
+</html>

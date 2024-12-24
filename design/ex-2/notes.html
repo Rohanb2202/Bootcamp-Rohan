@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise 2: Basics of Colors</h2>
+            <h3>Level 1</h3>
+            <ul>
+                <li>Add a card to the page. Apply a monochromatic theme to the entire page using a base color. Ensure the card (background, border, and shadow) stands out using alpha channels for subtle differentiation.</li>
+                <li>Create a second version of the page using a complementary color scheme. Add clear contrast between elements.</li>
+                <li>Extend to a three-color scheme by incorporating an accent color. Style headers, links, and buttons with the accent color.</li>
+                <li>Save each version as a separate file (e.g., solution-2-1.html, solution-2-2.html).</li>
+            </ul>
+
+            <h3>Level 2</h3>
+            <ul>
+                <li>Create dark and light themes for the page using CSS variables:
+                    <ul>
+                        <li>Define --primary, --secondary, and --background colors.</li>
+                        <li>Create two separate stylesheets, one for dark and one for light mode.</li>
+                    </ul>
+                </li>
+                <li>Style an image with overlaid text:
+                    <ul>
+                        <li>Adjust text and overlay colors for contrast in both themes.</li>
+                    </ul>
+                </li>
+                <li>Save two versions of the page (dark and light).</li>
+                <li>Build a color swatch page:
+                    <ul>
+                        <li>Use HSL values to generate variations in saturation and lightness.</li>
+                        <li>Create a grid of color swatches labeled with their HSL values.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Level 3 (Advanced)</h3>
+            <ul>
+                <li>Design a gradient theme using only CSS:
+                    <ul>
+                        <li>Apply linear gradients to headers and radial gradients to buttons.</li>
+                        <li>Save a version showcasing how gradient angles and stops affect the design.</li>
+                    </ul>
+                </li>
+                <li>Create a responsive color palette:
+                    <ul>
+                        <li>Define tints and shades for the base colors using lighten() and darken() in CSS.</li>
+                        <li>Apply the palette dynamically using media queries for different breakpoints.</li>
+                    </ul>
+                </li>
+                <li>Implement a contrast demonstration page:
+                    <ul>
+                        <li>Create sections showing how different color combinations meet accessibility standards.</li>
+                        <li>Use borders and shadows to enhance visual hierarchy.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            <h3>Level 1</h3>
+            <p>I started by applying a monochromatic theme using a base color to ensure visual consistency. To make the card stand out, I used alpha channels to subtly differentiate its background, border, and shadow. For the complementary color scheme, I selected contrasting hues to improve readability and user engagement. Finally, I incorporated an accent color to highlight headers, links, and buttons, ensuring a cohesive design across the page.</p>
+
+            <h3>Level 2</h3>
+            <p>Using CSS variables, I defined --primary, --secondary, and --background colors to create dark and light themes. Separate stylesheets were designed for each mode, allowing users to toggle between them. For the image with overlaid text, I ensured adequate contrast in both themes by carefully selecting overlay and text colors. The color swatch page was built using HSL values, showcasing variations in saturation and lightness in a well-structured grid.</p>
+
+            <h3>Level 3</h3>
+            <p>I created a gradient theme, applying linear gradients to headers and radial gradients to buttons. This showcased how gradient angles and stops can enhance design aesthetics. A responsive color palette was developed using CSS functions like lighten() and darken() to define tints and shades, dynamically applied using media queries. Finally, I implemented a contrast demonstration page to highlight accessibility-compliant color combinations, using borders and shadows to establish a clear visual hierarchy.</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>notes</p>
+    </footer>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

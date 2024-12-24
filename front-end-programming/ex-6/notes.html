@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6: Approach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #007acc;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Approach for Exercise 6: Basic Project</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Layout Design</h2>
+            <ul>
+                <li>
+                    <strong>User Interaction Section:</strong>
+                    <ul>
+                        <li><strong>Color Picker:</strong> A simple color input for selecting the primary color.</li>
+                        <li><strong>Sliders:</strong> Controls for adjusting saturation, lightness, and opacity of the color.</li>
+                        <li><strong>Color Variations:</strong> A grid displaying variations of the selected color.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sample Page:</strong>
+                    <ul>
+                        <li>Simulates a webpage layout with headers, navigation menus, tables, and buttons.</li>
+                        <li>Applies selected color and variations dynamically.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. User Interaction</h2>
+            <ul>
+                <li>
+                    <strong>Primary Color Selection:</strong>
+                    <ul>
+                        <li>Implemented using an <code>&lt;input type="color"&gt;</code> element.</li>
+                        <li>Selected color updates the sample page elements in real-time.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Adjustments:</strong>
+                    <ul>
+                        <li><strong>Saturation:</strong> Adjust intensity using a slider.</li>
+                        <li><strong>Lightness:</strong> Modify brightness or darkness using a slider.</li>
+                        <li><strong>Opacity:</strong> Control transparency with a slider.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Color Variations:</strong>
+                    <ul>
+                        <li>Grid showing variations by systematically adjusting saturation and lightness.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>3. Sample Page Elements</h2>
+            <ul>
+                <li><strong>Header:</strong> Highlights the primary color.</li>
+                <li><strong>Navigation Bar:</strong> Demonstrates color integration in UI components.</li>
+                <li><strong>Content Area:</strong> Displays a simulated article and table styled with selected colors.</li>
+                <li><strong>Sidebar:</strong> Uses lighter variations of the primary color.</li>
+                <li><strong>Buttons:</strong> Styled dynamically to match the selected color scheme.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>4. Implementation</h2>
+            <ul>
+                <li><strong>Real-Time Updates:</strong> Changes in the color picker or sliders instantly reflect on the page.</li>
+                <li><strong>Color Calculations:</strong> Variations calculated using HSL transformations.</li>
+                <li><strong>Dynamic Styling:</strong> CSS variables are updated for seamless color changes.</li>
+            </ul>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

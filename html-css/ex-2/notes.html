@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        .back-button {
+               position: fixed;
+               bottom: 20px;
+               left: 20px;
+               padding: 12px 24px;
+               background-color: #3b82f6;
+               color: white;
+               border: none;
+               border-radius: 8px;
+               font-family: system-ui, -apple-system, sans-serif;
+               font-size: 16px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 8px;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
+   
+           .back-button:hover {
+               background-color: #2563eb;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           .back-button:active {
+               transform: translateY(0);
+           }
+   
+           /* Responsive adjustments */
+           @media (max-width: 768px) {
+               .back-button {
+                   padding: 10px 20px;
+                   font-size: 14px;
+               }
+           }
+   
+           @media (max-width: 480px) {
+               .back-button {
+                   bottom: 15px;
+                   left: 15px;
+                   padding: 8px 16px;
+               }
+           }
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise 2</h2>
+            <h2>Level 1: Defining CSS Variables</h2>
+            <p>In this step, five CSS variables were defined in a <code>variables.css</code> file. The variables include:</p>
+            <ul>
+                <li><code>--primary-color</code>: Used for the main color theme of the page.</li>
+                <li><code>--secondary-color</code>: Complementary color for accents.</li>
+                <li><code>--header-font-size</code>: Specifies the font size for headers.</li>
+                <li><code>--body-font-size</code>: Sets the font size for body text.</li>
+                <li><code>--margin-spacing</code>: Defines consistent spacing for margins.</li>
+            </ul>
+            <p>The variables were linked to the main CSS file and applied to style headers, body text, and spacing in the HTML structure from Exercise 1.</p>
+        </section>
+
+        <section>
+            <h2>Level 2: Advanced CSS Variable Usage</h2>
+            <p>To ensure flexibility, default values were set for the variables using the <code>var()</code> function. For example:</p>
+            <pre><code>color: var(--primary-color, black);</code></pre>
+            <p>Alternate rows in the table were styled using the <code>:nth-child</code> selector:</p>
+            <pre><code>tbody tr:nth-child(even) {
+    background-color: var(--secondary-color, #f0f0f0);
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Level 3: Dynamic Theme Switching</h2>
+            <p>Variables were defined dynamically, such as:</p>
+            <pre><code>--secondary-color: var(--primary-color);</code></pre>
+            <p>A theme switcher was implemented using JavaScript. The theme toggles between light and dark modes by modifying the <code>data-theme</code> attribute on the <code>&lt;body&gt;</code> tag. Example CSS:</p>
+            <pre><code>[data-theme="dark"] {
+    --primary-color: #222;
+    --secondary-color: #555;
+    --header-font-size: 1.5rem;
+    --body-font-size: 1rem;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Challenges Faced</h2>
+            <ul>
+                <li>Ensuring cross-browser compatibility for CSS variables.</li>
+                <li>Creating a seamless transition between light and dark modes.</li>
+                <li>Maintaining readability with alternate row styling.</li>
+            </ul>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

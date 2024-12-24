@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+       
+      <section>
+            <h2>Exercise 5: Layout Principles</h2>
+            <h3>Level 1</h3>
+            <ul>
+                <li>Recreate the layout of a simple webpage (e.g., medium.com article).</li>
+                <li>Focus on:
+                    <ul>
+                        <li>Applying consistent margins and padding.</li>
+                        <li>Using white space to create clear separation between sections.</li>
+                        <li>Aligning text and images correctly.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Level 2</h3>
+            <ul>
+                <li>Demonstrate a layout that emphasizes visual hierarchy.
+                    <ul>
+                        <li>Design a homepage with a large hero section, a featured article grid, and a footer.</li>
+                        <li>Use larger fonts and bolder colors for important elements.</li>
+                        <li>Add gutters between sections to maintain visual clarity.</li>
+                        <li>Apply a CSS grid system to organize content effectively.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            <h3>Level 1</h3>
+            <p>In Level 1, I recreated the layout of a basic webpage by focusing on consistent margins and padding. White space was strategically used to create clear separation between sections. I ensured proper alignment of text and images to enhance readability and maintain a clean design.</p>
+
+            <h3>Level 2</h3>
+            <p>For Level 2, I designed a homepage emphasizing visual hierarchy by including a large hero section, a featured article grid, and a footer. Larger fonts and bolder colors were applied to highlight important elements. Gutters were added between sections to improve visual clarity, and a CSS grid system was used to effectively organize the content.</p>
+        </section>
+
+  
+    </main>
+
+    <footer>
+        <p>notes</p>
+    </footer>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

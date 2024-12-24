@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4: Vite Full Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 4: Vite Full Exercise</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Objective</h2>
+            <p>Use Vite to its full potential, implementing advanced features and best practices.</p>
+        </section>
+        <section>
+            <h2>Steps</h2>
+            <ol>
+                <li><strong>Environment-Specific Configurations:</strong>
+                    <ul>
+                        <li>Set up <code>.env.development</code> and <code>.env.production</code> files to define separate API endpoints.</li>
+                        <li><strong>Task:</strong> Create an app that:
+                            <ul>
+                                <li>Fetches data from an endpoint specified in the environment variables.</li>
+                                <li>Ensures the correct environment file is used during development (<code>npm run dev</code>) and production (<code>npm run build</code>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Vite Practices:</strong>
+                    <ul>
+                        <li>Use <code>vite-plugin-checker</code> for real-time TypeScript type-checking.</li>
+                        <li>Use <code>vite-plugin-eslint</code> for linting during development.</li>
+                        <li><strong>Task:</strong> Add linting and type-checking tools to your Vite TypeScript project and display errors during the build process.</li>
+                    </ul>
+                </li>
+                <li><strong>Build Upon Previous Work:</strong>
+                    <ul>
+                        <li>Take the TypeScript application from Exercise 3 and:
+                            <ul>
+                                <li>Add advanced features like lazy loading modules and code splitting.</li>
+                                <li>Optimize for production by ensuring minification and tree-shaking.</li>
+                                <li>Test the performance of the final build.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>My Approach</h2>
+            <ol>
+                <li><strong>Environment-Specific Configurations:</strong>
+                    <ul>
+                        <li>Created <code>.env.development</code> and <code>.env.production</code> files to store API endpoints:
+                            <pre><code>.env.development
+VITE_API_URL=https://dev-data.csv
+                            </code></pre>
+                            <pre><code>.env.production
+VITE_API_URL=https://prod-data.csv
+                            </code></pre>
+                        </li>
+                        <li>Used <code>import.meta.env.VITE_API_URL</code> to fetch data dynamically based on the environment.</li>
+                        <li>Tested the application by running <code>npm run dev</code> and <code>npm run build</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Vite Practices:</strong>
+                    <ul>
+                        <li>Installed plugins:
+                            <pre><code>npm install vite-plugin-checker vite-plugin-eslint --save-dev</code></pre>
+                        </li>
+                        <li>Configured Vite to use these plugins:
+                            <pre><code>import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
+import eslintPlugin from 'vite-plugin-eslint';
+
+export default defineConfig({
+  plugins: [
+    checker({ typescript: true }),
+    eslintPlugin()
+  ]
+});
+                            </code></pre>
+                        </li>
+                        <li>Tested real-time type-checking and linting during development.</li>
+                    </ul>
+                </li>
+                <li><strong>Build Upon Previous Work:</strong>
+                    <ul>
+                        <li>Implemented lazy loading and code splitting for modules:
+                            <pre><code>import('./module.js').then(module => {
+  module.doSomething();
+});
+                            </code></pre>
+                        </li>
+                        <li>Enabled tree-shaking and minification by ensuring the production build was optimized.</li>
+                        <li>Used tools like Lighthouse to test the performance of the final build.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Design Review</title>
+</head>
+<body>
+    <h2>Research Papers Explorer</h2>
+
+    <ol><strong>Layout and Structure:</strong>
+        <li>The implementation of a card-based grid system effectively organizes complex research paper information, making it easily scannable for users</li>
+        <li>The search and filtering system with dropdown menus for Institution, Journal, and Year provides efficient data navigation</li>
+        <li>The "Reset Filters" and "Export Data" buttons are well-positioned, though they could benefit from more visual prominence</li>
+        <li>Pagination system at the bottom effectively manages large datasets, though the jump to page 188 could use a more intuitive interface</li>
+        <li>Each research paper card maintains consistent spacing and hierarchy, making information easily digestible</li>
+        <li>While the card-based layout works, the cards take up too much vertical space, resulting in unnecessary scrolling</li>
+        <li>The filtering system lacks visual feedback - users can't easily see which filters are currently active</li>
+        <li>The "Export Data" button provides no indication of what format the export will be in - this is a significant UX oversight</li>
+        <li>No way to customize how many results appear per page, forcing users to work with a preset limit</li>
+    </ol>
+
+    <ol><strong>Visual Design:</strong>
+        <li>The navy blue header provides good contrast against the white content area, enhancing readability</li>
+        <li>Typography hierarchy clearly distinguishes between paper titles, authors, and metadata</li>
+        <li>The interface suffers from a lack of visual hierarchy - everything appears to have equal importance</li>
+        <li>Citation numbers and impact factors, crucial for researchers, blend in with less important metadata</li>
+        <li>Keywords are static text when they should be clickable filters</li>
+        <li>The DOI numbers are not formatted as clickable links, forcing manual copying</li>
+        <li>No visual indication of whether papers are open access or require subscription</li>
+    </ol>
+
+    <h2>Weather Dashboard</h2>
+
+    <ol><strong>Layout and Structure:</strong>
+        <li>The city search interface is straightforward with a clear input field and action button</li>
+        <li>Weather cards present key information in a logical grouping of metrics</li>
+        <li>The "Single City" vs "Compare Cities" toggle provides good navigation between viewing modes</li>
+        <li>Weather metrics are well-organized in a grid layout within each city card</li>
+        <li>The remove city functionality (x button) is readily accessible</li>
+        <li>The city search lacks autocomplete, leading to potential errors in city names</li>
+        <li>The "Compare Cities" view becomes cluttered quickly with no apparent limit on how many cities can be added</li>
+        <li>Weather cards don't automatically refresh - no indication of when data was last updated</li>
+        <li>Critical weather warnings or alerts are missing from the interface</li>
+        <li>No option to save favorite cities for quick access</li>
+    </ol>
+
+    <ol><strong>Visual Design:</strong>
+        <li>Temperature variations between cities lack visual differentiation - hard to quickly compare</li>
+        <li>The misty background image interferes with text legibility</li>
+        <li>The dark theme creates an elegant backdrop for weather information, though contrast could be improved in some areas</li>
+        <li>Weather icons effectively communicate conditions, but could be more prominent</li>
+        <li>Temperature displays could benefit from more visual hierarchy to distinguish current temperature from "feels like"</li>
+    </ol>
+
+    <h2>Overall Rating: 6/10</h2>
+    <p>While both applications show promise, they suffer from significant usability issues. The Research Papers Explorer needs a complete rethink of its information hierarchy and interaction design. The Weather Dashboard, despite its modern aesthetic, prioritizes style over functionality in ways that hinder its primary purpose. Both applications would benefit from a user-centric redesign focusing on core functionality rather than visual appeal.</p>
+</body>
+</html>

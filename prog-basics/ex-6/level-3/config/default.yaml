@@ -1,0 +1,21 @@
+# config/default.yaml
+application:
+  name: Dynamic Function Loader
+  version: 1.0.0
+  logging:
+    level: info
+
+# Dynamic function configuration
+functions:
+  math:
+    module: ./math-functions.js
+    commands:
+      - name: sin
+      - name: cos
+      - name: square
+
+  custom:
+    module: ./custom-functions.js
+    commands:
+      - name: greet
+      - name: sayGoodbye

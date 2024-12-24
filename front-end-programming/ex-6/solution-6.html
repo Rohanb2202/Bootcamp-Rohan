@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-6</title>
+    <link rel="stylesheet" href="solution-6.css">
+</head>
+
+<body>
+<header>
+    
+</header>
+    <div class="controls">
+        <div class="color-picker">
+            <h3>Select Primary Color</h3>
+            <input type="color" id="colorPicker" class="color-input" value="#3b82f6">
+            <div class="color-info" id="colorInfo"></div>
+        </div>
+
+        <div class="slider-container">
+            <h3>Saturation</h3>
+            <input type="range" id="saturation" class="slider" min="0" max="100" value="100">
+            <span id="saturationValue">100%</span>
+        </div>
+
+        <div class="slider-container">
+            <h3>Lightness</h3>
+            <input type="range" id="lightness" class="slider" min="0" max="100" value="50">
+            <span id="lightnessValue">50%</span>
+        </div>
+
+        <div class="slider-container">
+            <h3>Opacity</h3>
+            <input type="range" id="opacity" class="slider" min="0" max="100" value="100">
+            <span id="opacityValue">100%</span>
+        </div>
+
+        <h3>Color Variations</h3>
+        <div class="variations" id="variations"></div>
+    </div>
+
+    <div class="preview">
+        <div class="sample-header">
+            <h1>Welcome to Color Explorer</h1>
+            <p>See how your color choices affect different elements</p>
+        </div>
+
+        <nav class="sample-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="sample-content">
+            <div class="sample-article">
+                <h2>Main Content</h2>
+                <p>This is a sample article to demonstrate how your selected colors appear in different contexts.</p>
+                
+                <table class="sample-table">
+                    <thead>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                            <th>Header 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td>Cell 2</td>
+                            <td>Cell 3</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 4</td>
+                            <td>Cell 5</td>
+                            <td>Cell 6</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="sample-button">Sample Button</button>
+            </div>
+
+            <div class="sample-sidebar">
+                <h3>Sidebar</h3>
+                <p>This sidebar shows how your color looks with reduced opacity.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="solution-6.js">
+
+    </script>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

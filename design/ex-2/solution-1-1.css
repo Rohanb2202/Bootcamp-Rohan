@@ -1,0 +1,162 @@
+/* Monochromatic Blue Theme */
+:root {
+    --base-color: #1a3b5c;  /* Deep blue base */
+    --color-100: #0f2133;   /* Darkest shade */
+    --color-200: #1a3b5c;   /* Base color */
+    --color-300: #2d5a8a;   /* Mid-tone */
+    --color-400: #3f7bb8;   /* Lighter shade */
+    --color-500: #51a3e6;   /* Lightest shade */
+    
+    --text-primary: #f4f7fa;
+    --text-secondary: rgba(244, 247, 250, 0.8);
+    
+    --background-primary: var(--color-100);
+    --background-secondary: var(--color-200);
+}
+
+h1{
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    background-color: var(--background-secondary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Card Component */
+.card {
+    background-color: rgba(29, 59, 92, 0.6);  /* Transparent variation of base color */
+    border: 1px solid rgba(61, 90, 128, 0.3);  /* Soft border with alpha */
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.1),
+        0 6px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(29, 59, 92, 0.7);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--color-500);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(81, 163, 230, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.card-content {
+    color: var(--text-secondary);
+}
+
+/* Modify existing elements to fit monochromatic theme */
+#zen-intro header {
+    background: linear-gradient(
+        135deg, 
+        var(--color-100) 0%, 
+        var(--color-300) 100%
+    );
+    color: var(--text-primary);
+}
+
+h3 {
+    color: var(--color-500);
+    border-bottom-color: rgba(81, 163, 230, 0.3);
+}
+
+a {
+    color: var(--color-400);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-500);
+}
+
+/* Additional theme adjustments */
+.main.supporting > div {
+    background-color: rgba(29, 59, 92, 0.5);
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 15px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    background-color: var(--color-100);
+    color: var(--text-secondary);
+    text-align: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 1rem;
+    }
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #005A9C;
+    --secondary-color: #FFA500;
+    --background-light: #F4F4F4;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Search and Filters */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.search-section input, 
+.search-section select {
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* News Grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.03);
+}
+
+.news-card-image {
+    height: 200px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.news-card-content {
+    padding: 15px;
+}
+
+.news-card-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.news-card-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    margin-top: 10px;
+}
+
+.no-results {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+/* Side Categories */
+.side-categories {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.side-categories h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.category-list {
+    list-style-type: none;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category-list a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-menu a {
+        margin: 10px 0;
+    }
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+    }
+}

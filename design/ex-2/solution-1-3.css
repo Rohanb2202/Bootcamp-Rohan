@@ -1,0 +1,242 @@
+/* Complementary Color Scheme with Accent Color */
+:root {
+    /* Primary color: Deep Teal */
+    --primary-color: #1a6b6b;
+    /* Complementary color: Warm Orange */
+    --complementary-color: #b3541e;
+    /* New Accent Color: Vibrant Purple */
+    --accent-color: #6a1b9a;
+    
+    /* Extended color palette */
+    --teal-100: #0d3636;
+    --teal-200: #1a6b6b;
+    --teal-300: #2fa0a0;
+    --teal-400: #44d6d6;
+    
+    --orange-100: #5c2a0f;
+    --orange-200: #b3541e;
+    --orange-300: #e67c3d;
+    --orange-400: #ffaa6c;
+    
+    --purple-100: #4a148c;
+    --purple-200: #6a1b9a;
+    --purple-300: #8e24aa;
+    --purple-400: #ab47bc;
+    
+    /* Neutral colors */
+    --neutral-100: #f4f4f4;
+    --neutral-200: #e0e0e0;
+    --neutral-300: #c0c0c0;
+    --neutral-400: #a0a0a0;
+    
+    /* Text colors */
+    --text-primary: var(--neutral-100);
+    --text-secondary: rgba(244, 244, 244, 0.85);
+    
+    /* Background colors */
+    --background-dark: var(--teal-100);
+    --background-medium: var(--teal-200);
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    background-color: var(--background-medium);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid var(--complementary-color);
+}
+
+/* Improved Spacing for Supporting Sections */
+.main.supporting > div {
+    background-color: var(--teal-100);
+    border: 1px solid var(--teal-300);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem; /* Added spacing between sections */
+    padding: 1.5rem;
+}
+
+/* Card Component with High Contrast */
+.card {
+    background-color: var(--teal-100);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        0 6px 10px rgba(106, 27, 154, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background-color: var(--teal-200);
+    border-color: var(--accent-color);
+}
+
+.card-title {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+/* Headings and Typography */
+h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Links with Accent Color */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--purple-300);
+    text-decoration: underline;
+}
+
+/* Action Buttons with Accent Color */
+.action-btn {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--purple-300);
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--teal-100);
+    border-top: 2px solid var(--accent-color);
+    color: var(--text-secondary);
+    text-align: center;
+    align-items: center;
+}
+
+footer a {
+    color: var(--accent-color);
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: var(--purple-300);
+}
+
+/* Rest of the previous CSS remains the same */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 1rem;
+        border-width: 1px;
+    }
+}
+
+.main-navigation {
+    background-color: var(--teal-100);
+    border-bottom: 2px solid var(--complementary-color);
+}
+
+.nav-item {
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--orange-300);
+    transform: scale(1.05);
+}
+
+/* Action Buttons with Complementary Accent */
+.action-btn {
+    background-color: var(--complementary-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--orange-300);
+    transform: translateY(-5px);
+}
+
+#zen-intro header {
+    background: linear-gradient(
+        135deg, 
+        var(--teal-200) 0%, 
+        var(--complementary-color) 100%
+    );
+    color: var(--text-primary);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    text-align: center;
+    align-items: center;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+    }
+}

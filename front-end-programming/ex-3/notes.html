@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Starting with Vite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        section h2 {
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007acc;
+        }
+        ol {
+            margin: 10px 0 20px 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                left: 15px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise 3: Starting with Vite</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Objective</h2>
+            <p>Learn how to use Vite to scaffold, configure, and build projects with modern tools.</p>
+        </section>
+        <section>
+            <h2>Steps</h2>
+            <ol>
+                <li><strong>Starter Template (JavaScript):</strong>
+                    <ul>
+                        <li>Initialize a Vite project using the JavaScript template:</li>
+                        <pre><code>npm create vite@latest my-js-app -- --template vanilla</code></pre>
+                        <li><strong>Task:</strong> Rebuild the student management dashboard from Exercise 1:
+                            <ul>
+                                <li>Load student data from a JSON file and display it in a table.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Starter Template (TypeScript):</strong>
+                    <ul>
+                        <li>Initialize a Vite project using the TypeScript template:</li>
+                        <pre><code>npm create vite@latest my-ts-app -- --template vanilla-ts</code></pre>
+                        <li><strong>Task:</strong> Enhance the student management dashboard:
+                            <ul>
+                                <li>Fetch data from a CSV file, parse it using PapaParse, and display it using AG Grid.</li>
+                                <li>Modularize the code for data loading, parsing, and rendering.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Vite with Extended Options:</strong>
+                    <ul>
+                        <li>Define a CSS file with classes like <code>m-1</code>, <code>m-2</code>, until <code>m-8</code>, where each <code>m-n</code> is <code>n*2px</code>.</li>
+                        <li>Recreate the same classes in SCSS using loops.</li>
+                        <li>Utilize Vite’s SCSS support to configure and integrate the SCSS file.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>My Approach</h2>
+            <ol>
+                <li><strong>Starter Template (JavaScript):</strong>
+                    <ul>
+                        <li>Initialized the project using <code>npm create vite@latest my-js-app -- --template vanilla</code>.</li>
+                        <li>Rebuilt the student management dashboard by:
+                            <ul>
+                                <li>Loading student data from a JSON file using <code>fetch</code>.</li>
+                                <li>Rendering the data in a dynamically generated HTML table.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Starter Template (TypeScript):</strong>
+                    <ul>
+                        <li>Initialized the project using <code>npm create vite@latest my-ts-app -- --template vanilla-ts</code>.</li>
+                        <li>Enhanced the dashboard by:
+                            <ul>
+                                <li>Fetching and parsing CSV data using PapaParse.</li>
+                                <li>Displaying the data in an AG Grid table with features like column sorting and filtering.</li>
+                                <li>Separating the logic into modules for data loading, parsing, and rendering.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Vite with Extended Options:</strong>
+                    <ul>
+                        <li>Created a CSS file and used SCSS to define the same classes dynamically with loops with the help of documentation and LLM</li>                        
+                        <li>Integrated SCSS into the Vite project by:
+                            <ul>
+                                <li>Installing SCSS support: <code>npm install sass</code>.</li>
+                                <li>Creating and linking the SCSS file in the project.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

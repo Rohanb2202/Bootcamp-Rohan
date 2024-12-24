@@ -1,0 +1,2 @@
+LLM Used: "Claude"
+Name of the Chat = "Student Management Dashboard with TypeScript, PapaParse, and AG Grid"

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-3 : solution-3</title>
+    <!-- Include Classless.de -->
+    <link rel="stylesheet" href="https://classless.de/classless.css">
+    <style>
+        .back-button {
+               position: fixed;
+               bottom: 20px;
+               left: 20px;
+               padding: 12px 24px;
+               background-color: #3b82f6;
+               color: white;
+               border: none;
+               border-radius: 8px;
+               font-family: system-ui, -apple-system, sans-serif;
+               font-size: 16px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 8px;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
+   
+           .back-button:hover {
+               background-color: #2563eb;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           .back-button:active {
+               transform: translateY(0);
+           }
+   
+           /* Responsive adjustments */
+           @media (max-width: 768px) {
+               .back-button {
+                   padding: 10px 20px;
+                   font-size: 14px;
+               }
+           }
+   
+           @media (max-width: 480px) {
+               .back-button {
+                   bottom: 15px;
+                   left: 15px;
+                   padding: 8px 16px;
+               }
+           }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>My Blog Post</h1>
+            <h2>Exploring Classless CSS</h2>
+        </header>
+        <section>
+            <p>Classless CSS is a minimalistic way to style web pages without assigning classes or IDs to elements.</p>
+
+            <ul>
+                <li>No need to use <code>class</code> or <code>id</code> attributes.</li>
+                <li>Automatically styled by the browser or default stylesheets.</li>
+                <li>Helps create clean and straightforward designs.</li>
+            </ul>
+
+            <blockquote>
+                "Simplicity is the ultimate sophistication." – Leonardo da Vinci
+            </blockquote>
+
+            <p>For example, a simple way to center content is using the CSS rule: <code>display: flex; justify-content: center; align-items: center;</code>.</p>
+        </section>
+        <footer>
+            <p>Thank you for reading!</p>
+        </footer>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+</body>
+</html>

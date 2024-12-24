@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f4f4f4;
+            padding: 5px;
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 8px 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Exercise 1: Basics of Fonts</h2>
+            <h3>Level 1</h3>
+            <ul>
+                <li>Add a snippet of JavaScript code (10 lines).</li>
+                <li>Apply basic font styles using system fonts (e.g., Arial, Times New Roman, Courier).</li>
+                <li>Change the weights and apply different weight to different classes. Update the page to inform which part has which weight of font.</li>
+            </ul>
+
+            <h3>Level 2</h3>
+            <ul>
+                <li>Use Google Fonts to apply three fonts (sans-serif for text, serif for headings, monospace for code).</li>
+                <li>Check how variable fonts work and illustrate them on your page.</li>
+                <li>Show what you can do with text: Drop cap, shadow, and large headings where an image shows only through the text.</li>
+            </ul>
+
+            <h3>Level 3</h3>
+            <ul>
+                <li>Install a custom font locally and use it in the page (e.g., Geist font from Vercel).</li>
+                <li>Combine multiple font families to create a typographic hierarchy (e.g., headers vs. body text).</li>
+                <li>Adjust font height, spacing, etc., and illustrate on the same page with additional paragraphs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Approach</h2>
+            <h3>Level 1</h3>
+            <p>To start, I used system fonts like Arial, Times New Roman, and Courier New. I applied font weights using CSS classes and ensured that the updated weights were reflected in the content. Each font type and weight was documented to make its application clear.</p>
+
+            <h3>Level 2</h3>
+            <p>Next, I integrated Google Fonts to apply three distinct fonts. Sans-serif fonts were used for text, serif for headings, and monospace for code. I explored variable fonts and demonstrated their utility by dynamically changing font weights and styles. Additionally, I implemented text effects like drop caps, shadows, and large headings with background images visible only through the text.</p>
+
+            <h3>Level 3</h3>
+            <p>I installed a custom font (Geist) locally and used it for a unique style. I also combined multiple font families to establish a clear typographic hierarchy. Font height and spacing were adjusted to enhance readability and aesthetic balance. New paragraphs were added to demonstrate these changes effectively.</p>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <p>notes</p>
+    </footer>
+
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

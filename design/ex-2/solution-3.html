@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Zen Garden: The Beauty of CSS Design</title>
+
+    <link rel="stylesheet" media="screen" href="solution-3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dave Shea">
+    <meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+    <meta name="robots" content="all">
+
+    <style>
+        /* Inline critical CSS for immediate rendering */
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #34495e;
+            --background-color: #f4f7f6;
+            --text-color: #2c3e50;
+            --accent-color: #ff5722;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body id="css-zen-garden" class="light-theme">
+    <div class="page-wrapper">
+        <section class="intro" id="zen-intro">
+            <header role="banner">
+                <h1>CSS Zen Garden</h1>
+                <h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+            </header>
+
+            <div class="summary" id="zen-summary" role="article">
+                <p>This page demonstrates the power of CSS design. The core principles:</p>
+                <ol>
+                    <li>Start with the provided HTML</li>
+                    <li>Enhance progressively through CSS</li>
+                    <li>Showcase design creativity</li>
+                </ol>
+                <p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet to transform this page.</p>
+            </div>
+
+            <div class="preamble" id="zen-preamble" role="article">
+                <h3>The Road to Enlightenment</h3>
+                <p>Web design has evolved beyond browser-specific tags and incompatible standards. We've achieved enlightenment through the tireless efforts of the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and major browser creators.</p>
+                <p>The CSS Zen Garden invites you to explore, learn, and reimagine web design techniques.</p>
+            </div>
+        </section>
+
+        <div class="image-container">
+            <img src="https://picsum.photos/1200/600" alt="Inspiring Landscape">
+            <div class="image-overlay">
+                <h2>Design Evolution</h2>
+                <p>Transforming web aesthetics through creative CSS implementations</p>
+            </div>
+        </div>
+
+        <main class="main supporting" id="zen-supporting">
+            <article class="explanation" id="zen-explanation">
+                <h3>The Power of CSS</h3>
+                <p>CSS provides complete control over a document's visual presentation. The Zen Garden demonstrates how the same HTML can be transformed dramatically through creative styling.</p>
+            </article>
+
+            <article class="participation" id="zen-participation">
+                <h3>Your Design Journey</h3>
+                <p>Modify the CSS freely, exploring responsive design, typography, and visual storytelling. Use the sample files as a starting point for your creative exploration.</p>
+            </article>
+
+            <article class="benefits" id="zen-benefits">
+                <h3>Why Participate?</h3>
+                <p>Gain recognition, inspiration, and contribute to a living gallery of web design techniques. Learn from others and push the boundaries of what's possible with CSS.</p>
+            </article>
+
+            <article class="requirements" id="zen-requirements">
+                <h3>Design Guidelines</h3>
+                <p>Focus on <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> with careful <abbr title="Cascading Style Sheets, levels 3 and 4">CSS 3 &amp; 4</abbr> implementation. Ensure cross-browser compatibility and validate your CSS.</p>
+            </article>
+        </main>
+    </div>
+
+    <section class="contrast">
+        <div class="accessibility-showcase">
+            <h2>Accessibility Considerations</h2>
+            <div class="contrast-demonstrations">
+                <div class="contrast-block pass">
+                    <h3>WCAG Compliant Colors</h3>
+                    <div class="contrast-example" style="background-color: #1a73e8; color: white;">
+                        High Contrast Combination
+                    </div>
+                </div>
+                <div class="contrast-block fail">
+                    <h3>Accessibility Challenges</h3>
+                    <div class="contrast-example" style="background-color: #888; color: #f0f0f0;">
+                        Low Contrast Warning
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contrast-section pass">
+            <h2>High Contrast Combination</h2>
+            <div class="contrast-text" style="color: #1a73e8; background-color: white;">
+                Blue Text on White Background
+            </div>
+            <p>WCAG AA and AAA Compliant</p>
+            <div class="wcag-level">Contrast Ratio: 8.59:1</div>
+        </div>
+    
+        <div class="contrast-section fail">
+            <h2>Low Contrast Combination</h2>
+            <div class="contrast-text" style="color: #888; background-color: #f0f0f0;">
+                Gray Text on Light Gray Background
+            </div>
+            <p>Does Not Meet WCAG Standards</p>
+            <div class="wcag-level">Contrast Ratio: 2.93:1</div>
+        </div>
+    
+        <div class="contrast-section pass">
+            <h2>Medium Contrast</h2>
+            <div class="contrast-text" style="color: #2c3e50; background-color: #ecf0f1;">
+                Dark Text on Light Background
+            </div>
+            <p>WCAG AA Compliant</p>
+            <div class="wcag-level">Contrast Ratio: 6.73:1</div>
+        </div>
+        </section>
+    <div class="color-exploration">
+        <h2 style="text-align: center;">Color Palette Exploration</h2>
+        <div id="color-grid" class="color-grid"></div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-links">
+            <a href="http://validator.w3.org/check/referer" class="zen-validate-html">HTML</a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" class="zen-validate-css">CSS</a>
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" class="zen-license">CC</a>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" class="theme-toggle">🌓 Toggle Theme</button>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            body.classList.toggle('dark-theme');
+            
+            // Save theme preference
+            localStorage.setItem('zen-garden-theme', 
+                body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme'
+            );
+        });
+
+        // Restore theme on page load
+        const savedTheme = localStorage.getItem('zen-garden-theme');
+        if (savedTheme) {
+            body.classList.remove('light-theme', 'dark-theme');
+            body.classList.add(savedTheme);
+        }
+
+        // Color Swatch Generation
+        function generateColorSwatches() {
+            const grid = document.getElementById('color-grid');
+            const hues = [0, 60, 120, 180, 240, 300];
+            const colorNames = ['Red', 'Yellow', 'Green', 'Cyan', 'Blue', 'Magenta'];
+
+            hues.forEach((hue, index) => {
+                for (let saturation = 50; saturation <= 90; saturation += 20) {
+                    for (let lightness = 40; lightness <= 80; lightness += 20) {
+                        const colorSwatch = document.createElement('div');
+                        colorSwatch.className = 'color-swatch';
+                        colorSwatch.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+                        
+                        const colorInfo = document.createElement('div');
+                        colorInfo.className = 'color-info';
+                        
+                        const colorName = document.createElement('h3');
+                        colorName.textContent = `${colorNames[index]} Palette`;
+                        
+                        const hslText = document.createElement('p');
+                        hslText.textContent = `HSL(${hue}, ${saturation}%, ${lightness}%)`;
+                        
+                        colorInfo.appendChild(colorName);
+                        colorInfo.appendChild(hslText);
+                        colorSwatch.appendChild(colorInfo);
+                        grid.appendChild(colorSwatch);
+
+                        // Click-to-copy functionality
+                        colorSwatch.addEventListener('click', () => {
+                            navigator.clipboard.writeText(`hsl(${hue}, ${saturation}%, ${lightness}%)`).then(() => {
+                                const originalText = hslText.textContent;
+                                hslText.textContent = 'Copied!';
+                                setTimeout(() => {
+                                    hslText.textContent = originalText;
+                                }, 1000);
+                            });
+                        });
+                    }
+                }
+            });
+        }
+
+        // Generate color swatches when page loads
+        document.addEventListener('DOMContentLoaded', generateColorSwatches);
+    </script>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

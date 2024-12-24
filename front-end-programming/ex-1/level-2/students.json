@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Rohan", "age": 18, "grade": "A" },
+    { "id": 2, "name": "Jane Smith", "age": 19, "grade": "B" },
+    { "id": 3, "name": "Mike Johnson", "age": 20, "grade": "A+" },
+    { "id": 4, "name": "Emily Davis", "age": 17, "grade": "B-" }
+]

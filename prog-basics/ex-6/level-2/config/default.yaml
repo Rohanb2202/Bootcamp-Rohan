@@ -1,0 +1,15 @@
+# config/default.yaml
+database:
+  host: localhost
+  port: 5432
+  username: rohan
+  password: secretpassword
+
+application:
+  name: Ex-6 App
+  version: 1.0.0
+  environment: development
+
+logging:
+  level: info
+  file: app.log

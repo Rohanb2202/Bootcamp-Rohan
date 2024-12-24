@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Madras - Department of Computer Science and Engineering</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="solution-3-1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <img src="https://www.iitm.ac.in/sites/all/themes/touchm/logo.png" alt="IIT Madras Logo">
+                <span class="logo-text">Computer Science and Engineering</span>
+            </div>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">People</a>
+                <a href="#">Research</a>
+                <a href="#">Academics</a>
+                <a href="#">Publications</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header container">
+        <h1>Faculty Directory</h1>
+        <p>Discover the exceptional researchers and educators of our department</p>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="container search-filter-section">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search by name, position, or research area"
+        >
+        <div class="filter-dropdowns">
+            <select id="positionFilter">
+                <option value="">All Positions</option>
+                <option value="Professor">Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Assistant Professor">Assistant Professor</option>
+            </select>
+            <select id="researchFilter">
+                <option value="">All Research Areas</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Computer Vision">Computer Vision</option>
+                <option value="Distributed Systems">Distributed Systems</option>
+                <option value="Network Security">Network Security</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Faculty Container -->
+    <div class="container">
+        <div id="facultyContainer" class="faculty-grid">
+            <!-- Faculty cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        const facultyMembers = [
+            {
+                id: 1,
+                name: 'Dr. Rahul Sharma',
+                position: 'Professor',
+                email: 'rahul.sharma@iitm.ac.in',
+                researchAreas: ['Machine Learning', 'Artificial Intelligence', 'Computer Vision'],
+                image: 'https://via.placeholder.com/400x250?text=Dr.+Rahul+Sharma',
+                publications: 42,
+                awards: 3,
+                description: 'Expert in machine learning and computer vision with extensive research contributions.'
+            },
+            {
+                id: 2,
+                name: 'Dr. Priya Iyer',
+                position: 'Associate Professor',
+                email: 'priya.iyer@iitm.ac.in',
+                researchAreas: ['Distributed Systems', 'Cloud Computing', 'Network Security'],
+                image: 'https://via.placeholder.com/400x250?text=Dr.+Priya+Iyer',
+                publications: 35,
+                awards: 2,
+                description: 'Specializing in distributed systems and network security with innovative research approaches.'
+            }
+            // More faculty members can be added here
+        ];
+
+        function renderFacultyMembers(members) {
+            const container = document.getElementById('facultyContainer');
+            container.innerHTML = '';
+
+            if (members.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <p>No faculty members found matching your search.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            members.forEach(faculty => {
+                const facultyCard = document.createElement('div');
+                facultyCard.classList.add('faculty-card');
+                facultyCard.innerHTML = `
+                    <div class="faculty-image-container">
+                        <img 
+                            src="${faculty.image}" 
+                            alt="${faculty.name}" 
+                            class="faculty-image"
+                        >
+                        <div class="faculty-overlay">
+                            <h3>${faculty.name}</h3>
+                            <p>${faculty.position}</p>
+                        </div>
+                    </div>
+                    <div class="faculty-details">
+                        <p>${faculty.description}</p>
+                        <div class="research-areas">
+                            ${faculty.researchAreas.map(area => 
+                                `<span class="research-tag">${area}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    <div class="faculty-stats">
+                        <div class="stat"><i class="fas fa-book"></i> ${faculty.publications} Publications</div>
+                        <div class="stat"><i class="fas fa-trophy"></i> ${faculty.awards} Awards</div>
+                    </div>
+                `;
+                container.appendChild(facultyCard);
+            });
+        }
+
+        function filterFaculty() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const positionFilter = document.getElementById('positionFilter').value;
+            const researchFilter = document.getElementById('researchFilter').value;
+
+            const filteredFaculty = facultyMembers.filter(faculty => 
+                (searchTerm === '' || 
+                    faculty.name.toLowerCase().includes(searchTerm) ||
+                    faculty.researchAreas.some(area => 
+                        area.toLowerCase().includes(searchTerm)
+                    )
+                ) &&
+                (positionFilter === '' || faculty.position === positionFilter) &&
+                (researchFilter === '' || faculty.researchAreas.includes(researchFilter))
+            );
+
+            renderFacultyMembers(filteredFaculty);
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Initial render
+        renderFacultyMembers(facultyMembers);
+
+        // Add event listeners
+        document.getElementById('searchInput').addEventListener('input', filterFaculty);
+        document.getElementById('positionFilter').addEventListener('change', filterFaculty);
+        document.getElementById('researchFilter').addEventListener('change', filterFaculty);
+    </script>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+</body>
+</html>

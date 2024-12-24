@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Design Review</title>
+</head>
+<body>
+    <h2>Research Papers Explorer</h2>
+
+    <ol><strong>Layout and Structure:</strong>
+        <li>The card-based layout effectively presents research data, though the infinite scroll implementation rather than pagination creates potential performance issues with large datasets</li>
+        <li>The filtering system with dropdowns for Region, Country, Order Year, Order Priority, and Sales Channel provides comprehensive data organization</li>
+        <li>Each card maintains consistent formatting with clear hierarchy between product type, region, and financial data</li>
+        <li>The search bar spanning the full width provides good visibility but lacks advanced search options</li>
+        <li>The infinite scroll approach, while modern, makes it difficult to reference specific items or maintain position when refreshing</li>
+        <li>Cards could be more compact - current spacing leads to excessive scrolling and fewer items visible at once</li>
+        <li>No visual indicators for active filters make it hard to track current search parameters</li>
+        <li>Missing batch operations functionality for handling multiple items simultaneously</li>
+    </ol>
+
+    <ol><strong>Visual Design:</strong>
+        <li>Clean white card design against light background maintains good readability</li>
+        <li>Typography effectively distinguishes between different data categories</li>
+        <li>Total Profit values could benefit from better visual emphasis given their importance</li>
+        <li>Consistent use of navy blue for interactive elements aids navigation</li>
+        <li>Filter dropdowns lack visual feedback when activated</li>
+        <li>No clear visual hierarchy between primary and secondary information within cards</li>
+        <li>Missing visual indicators for sorting status in column headers</li>
+    </ol>
+
+    <h2>Weather Dashboard</h2>
+
+    <ol><strong>Layout and Structure:</strong>
+        <li>Simple, focused design with clear city search functionality</li>
+        <li>Weather information is logically organized within the widget</li>
+        <li>Search interface is straightforward but lacks autocomplete functionality</li>
+        <li>Current implementation shows only basic weather metrics</li>
+        <li>No indication of data freshness or last update timestamp</li>
+        <li>Missing extended forecast functionality</li>
+        <li>Absence of weather alerts or warning system</li>
+        <li>No option to toggle between temperature units</li>
+    </ol>
+
+    <ol><strong>Visual Design:</strong>
+        <li>Dark theme creates good contrast for weather information</li>
+        <li>Weather condition icon could be more prominent</li>
+        <li>Temperature and "feels like" values need better visual differentiation</li>
+        <li>Clean layout but could benefit from more weather-specific visualization</li>
+        <li>Humidity percentage lacks context or visual representation</li>
+    </ol>
+
+    <h2>Overall Rating: 6/10</h2>
+    <p>Both applications demonstrate fundamental UX issues that impact their utility. The Research Papers Explorer's infinite scroll implementation, while modern, creates practical usability challenges and performance concerns with larger datasets. The Weather Dashboard, while visually clean, lacks essential features and contextual information that would make it more useful for daily weather tracking. Both applications would benefit from focused UX improvements prioritizing user needs over current design trends.</p>
+</body>
+</html>

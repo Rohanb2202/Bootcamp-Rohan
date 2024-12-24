@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Steps</title>
+    <style>
+        .back-button {
+               position: fixed;
+               bottom: 20px;
+               left: 20px;
+               padding: 12px 24px;
+               background-color: #3b82f6;
+               color: white;
+               border: none;
+               border-radius: 8px;
+               font-family: system-ui, -apple-system, sans-serif;
+               font-size: 16px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 8px;
+               transition: all 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+               z-index: 1000;
+           }
+   
+           .back-button:hover {
+               background-color: #2563eb;
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           }
+   
+           .back-button:active {
+               transform: translateY(0);
+           }
+   
+           /* Responsive adjustments */
+           @media (max-width: 768px) {
+               .back-button {
+                   padding: 10px 20px;
+                   font-size: 14px;
+               }
+           }
+   
+           @media (max-width: 480px) {
+               .back-button {
+                   bottom: 15px;
+                   left: 15px;
+                   padding: 8px 16px;
+               }
+           }
+   </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Learnings</h1>
+    </header>
+
+    <main>
+        <section>
+            <ul>
+                <li><strong>Latest Updates on CSS:</strong>
+                    <ul>
+                        <li>CSS Nesting: This feature allows you to write cleaner and more structured CSS by nesting rules within parent selectors. It improves readability and maintainability, and browser support for nesting is expanding​
+                        </li>
+                        <li>Cascade Layers: Introduced to enhance control over the style application order, cascade layers allow developers to prioritize specific styles easily, which is especially useful in large projects​</li>
+                        <li>Tools like Tailwind CSS continue to gain popularity, offering streamlined ways to apply utility classes directly in HTML</li>
+                        <li> New Pseudo-Classes:</li>
+                            <ul>
+                                <li>:has(): Lets you target parent elements based on their children, reducing reliance on complex selectors.</li>
+                            <li>:is(): Simplifies applying the same styles to multiple elements​ </li>
+                            </ul>
+
+                    </ul>
+                </li>
+                <li><strong>Latest Updates on JS:</strong>
+                    <ul>
+                        <li>Standard Enhancements:</li>
+                        <ul>
+
+                            <li>ECMAScript 2024 introduces the Shadow Realm API, enabling isolated execution environments within JavaScript applications.</li>
+                            <li>Temporal is replacing the Date object for modern date-time handling, offering better reliability and usability​. </li>
+                        </ul>
+                            
+                        <li>Optimizations in V8 (Chrome's JS engine) are bringing faster parsing, execution, and reduced memory overhead.</li>
+                        <li>Frameworks like SolidJS and Qwik are gaining popularity for their faster rendering and hydration capabilities compared to traditional frameworks like React.</li>
+                    </ul>
+                </li>
+                <li><strong>Latest Updates on Frontend Technologies:</strong>
+                    <ol>
+                        <li><strong>React.js:</strong>
+                            <ul>
+                                <li>Continues to dominate with its component-based architecture and efficient virtual DOM rendering.</li>
+                                <li>The ecosystem supports server-side rendering (SSR) and mobile development with React Native.</li>
+                                <li>New efforts, such as the React Forget Compiler, aim to simplify development and enhance performance.</li>
+                                <li>Sources: SOFTWARE DEVELOPMENT COMPANY | NETGURU, CODENOMAD.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Vue.js:</strong>
+                            <ul>
+                                <li>Gaining popularity for its progressive nature, catering to both beginners and experienced developers.</li>
+                                <li>Offers strong community support and detailed documentation for building SPAs and complex UIs.</li>
+                                <li>Source: CODENOMAD.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Angular:</strong>
+                            <ul>
+                                <li>A robust choice for enterprise projects, featuring TypeScript support, dependency injection, and two-way data binding.</li>
+                                <li>Despite a steeper learning curve, it remains relevant for large-scale applications requiring scalability.</li>
+                                <li>Source: CODENOMAD.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Svelte:</strong>
+                            <ul>
+                                <li>Continues to attract attention with its innovative compilation-based approach, leading to smaller bundles and faster runtime performance.</li>
+                                <li>Its simplicity and developer-focused design make it a top choice for high-performance applications.</li>
+                                <li>Sources: SOFTWARE DEVELOPMENT COMPANY | NETGURU, CODENOMAD.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Next.js:</strong>
+                            <ul>
+                                <li>Builds on React.js to provide server-rendered and statically generated apps with features like automatic code splitting and integrated CSS support.</li>
+                                <li>Ideal for high-performance and SEO-friendly web development.</li>
+                                <li>Source: CODENOMAD.</li>
+                            </ul>
+                        </li>
+                        <li><strong>New Trends:</strong>
+                            <ul>
+                                <li><strong>Microfrontends:</strong> Gaining traction for modular architecture in large-scale apps, supported by tools like Module Federation.</li>
+                                <li><strong>State Management:</strong> Lightweight solutions like Zustand and Jotai are replacing Redux in React ecosystems due to simplicity and reduced boilerplate.</li>
+                                <li>Sources: SOFTWARE DEVELOPMENT COMPANY | NETGURU.</li>
+                            </ul>
+                        </li>
+                        <li><strong>HTMX:</strong>
+                            <ul>
+                                <li>Enables modern UI development by using HTML attributes for AJAX, CSS transitions, and WebSockets, simplifying the development of interactive web apps.</li>
+                                <li>Source: SOFTWARE DEVELOPMENT COMPANY | NETGURU.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <button class="back-button" onclick="window.location.href='/index.html'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back
+    </button>
+    
+</body>
+</html>
