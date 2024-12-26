@@ -3,6 +3,8 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import WeatherCard from './weatherCard';
 import Navigation from './Navigation';
+import BackButton from './Back_button';
+import { ArrowLeft } from 'lucide-react';
 
 export default function WeatherDashboard() {
   const [currentView, setCurrentView] = useState('single');
@@ -82,12 +84,56 @@ export default function WeatherDashboard() {
     </>
   );
 
+  // const BackButton = () => (
+  //   <Button
+  //     onClick={() => window.location.href = 'https://stellular-marshmallow-b77b25.netlify.app/'}
+  //     variant="ghost"
+  //     className="absolute left-4 bottom-4 flex items-center gap-2 text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+  //   >
+  //     <ArrowLeft size={20} />
+  //     Back
+  //   </Button>
+  // );
+  const Back_Button = () => (
+    <Button 
+      onClick={() => window.location.href = 'https://stellular-marshmallow-b77b25.netlify.app/'} 
+      variant="ghost" 
+      className="absolute left-4 bottom-4 flex items-center gap-2 text-white hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+    >
+      <ArrowLeft size={20} />
+      Back
+    </Button>
+  );
+
+
+  // return (
+  //   <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+  //     <Navigation currentView={currentView} onViewChange={setCurrentView} />
+  //     <main className="container py-8">
+  //       {currentView === 'single' ? renderSingleCityView() : renderComparisonView()}
+  //     </main>
+  //   </div>
+  // );
+
+  // return (
+  //   <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+  //     <div className="relative">
+  //       <Back_Button />
+  //       <Navigation currentView={currentView} onViewChange={setCurrentView} />
+  //     </div>
+  //     <main className="container py-8">
+  //       {currentView === 'single' ? renderSingleCityView() : renderComparisonView()}
+  //     </main>
+  //   </div>
+  // );
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative">
       <Navigation currentView={currentView} onViewChange={setCurrentView} />
       <main className="container py-8">
         {currentView === 'single' ? renderSingleCityView() : renderComparisonView()}
       </main>
+      <Back_Button />
     </div>
   );
 }
